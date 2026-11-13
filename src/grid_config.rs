@@ -671,10 +671,10 @@ pub struct Choice {
     pub word_id: WordId,
 }
 
-/// Turn the given grid config and fill choices into a rendered string.
-#[allow(dead_code)]
+/// Apply the given fill choices on top of the config's existing fill, returning a flat array of
+/// the resulting letters (with `None` for blocks and any cells that are still empty).
 #[must_use]
-pub fn render_grid(config: &GridConfig, choices: &[Choice]) -> String {
+fn build_filled_grid(config: &GridConfig, choices: &[Choice]) -> Vec<Option<char>> {
     let mut grid: Vec<Option<char>> = config
         .fill
         .iter()
@@ -701,7 +701,92 @@ pub fn render_grid(config: &GridConfig, choices: &[Choice]) -> String {
         }
     }
 
-    grid.chunks(config.width)
+    grid
+}
+
+/// A single entry (slot plus the string filled into it) in a completed or partially-completed grid.
+#[derive(Debug, Clone)]
+pub struct GridEntry {
+    pub slot_id: SlotId,
+    pub start_cell: GridCoord,
+    pub direction: Direction,
+
+    /// The letters filled into the slot, or `None` if any of its cells are still empty.
+    pub normalized_string: Option<String>,
+
+    /// The entry as it's spelled in the word list, if it's present there as a visible word.
+    pub canonical_string: Option<String>,
+
+    /// The entry's score, if it's present in the word list as a visible word.
+    pub score: Option<u16>,
+}
+
+impl GridEntry {
+    /// Is this entry a word that's actually present in the word list? This is false both for
+    /// incomplete entries and for strings that are only in the word list as hidden entries (which
+    /// is how non-words provided in an input grid are represented).
+    #[must_use]
+    pub fn is_in_word_list(&self) -> bool {
+        self.canonical_string.is_some()
+    }
+}
+
+/// Turn the given grid config and fill choices into a list of the entries in the grid, ordered by
+/// direction and then by position, along with information about each entry's word list status.
+#[allow(dead_code)]
+#[must_use]
+pub fn grid_entries(config: &GridConfig, choices: &[Choice]) -> Vec<GridEntry> {
+    let grid = build_filled_grid(config, choices);
+
+    let mut entries: Vec<GridEntry> = config
+        .slot_configs
+        .iter()
+        .map(|slot_config| {
+            let normalized_string: Option<String> = slot_config
+                .cell_fill_indices(config.width)
+                .iter()
+                .map(|&idx| grid[idx])
+                .collect();
+
+            // A word is only usable as fill if it's visible, so hidden entries (including
+            // non-words carried over from an input grid) don't count as being in the list.
+            let word = normalized_string.as_ref().and_then(|string| {
+                config
+                    .word_list
+                    .word_id_by_string
+                    .get(string)
+                    .map(|&word_id| &config.word_list.words[slot_config.length][word_id])
+                    .filter(|word| !word.hidden)
+            });
+
+            GridEntry {
+                slot_id: slot_config.id,
+                start_cell: slot_config.start_cell,
+                direction: slot_config.direction,
+                normalized_string,
+                canonical_string: word.map(|word| word.canonical_string.clone()),
+                score: word.map(|word| word.score),
+            }
+        })
+        .collect();
+
+    entries.sort_by_key(|entry| {
+        (
+            entry.direction,
+            entry.start_cell.1,
+            entry.start_cell.0,
+        )
+    });
+
+    entries
+}
+
+/// Turn the given grid config and fill choices into a rendered string.
+#[allow(dead_code)]
+#[must_use]
+pub fn render_grid(config: &GridConfig, choices: &[Choice]) -> String {
+    build_filled_grid(config, choices)
+        .chunks(config.width)
         .map(|line| {
             line.iter()
                 .map(|cell| cell.unwrap_or('.').to_string())

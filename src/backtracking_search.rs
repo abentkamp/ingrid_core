@@ -703,11 +703,25 @@ pub fn find_fill_for_seed(
 }
 
 /// Search for a valid fill for the given grid, if one can be found within the given amount of time.
+/// The search is deterministic, so this always returns the same fill for the same inputs; use
+/// `find_fill_with_seed` if you want to choose between different fills for the same grid.
 #[allow(dead_code)]
 pub fn find_fill(
     config: &GridConfig,
     timeout: Option<Duration>,
     elimination_sets: Option<&mut [EliminationSet]>,
+) -> Result<FillSuccess, FillFailure> {
+    find_fill_with_seed(config, timeout, elimination_sets, 0)
+}
+
+/// Search for a valid fill for the given grid, starting from the given RNG seed. Each retry uses
+/// the next seed in sequence, so distinct `seed` values generally produce distinct fills.
+#[allow(dead_code)]
+pub fn find_fill_with_seed(
+    config: &GridConfig,
+    timeout: Option<Duration>,
+    elimination_sets: Option<&mut [EliminationSet]>,
+    seed: u64,
 ) -> Result<FillSuccess, FillFailure> {
     let start = Instant::now();
     let deadline = timeout.map(|timeout| start + timeout);
@@ -790,7 +804,7 @@ pub fn find_fill(
             &slots,
             deadline,
             max_backtracks,
-            retry_num,
+            seed.wrapping_add(retry_num),
             &mut crossing_weights,
             elimination_sets,
         ) {
@@ -819,7 +833,7 @@ pub fn find_fill(
 mod tests {
     use crate::backtracking_search::{find_fill, FillFailure};
     use crate::grid_config::{
-        generate_grid_config_from_template_string, render_grid, OwnedGridConfig,
+        generate_grid_config_from_template_string, grid_entries, render_grid, OwnedGridConfig,
     };
     use crate::types::GlobalWordId;
     use crate::word_list::tests::{dictionary_path, word_list_source_config};
@@ -874,6 +888,67 @@ mod tests {
             "{}",
             render_grid(&grid_config.to_config_ref(), &result.choices)
         );
+    }
+
+    #[test]
+    fn test_grid_entries_are_all_in_word_list() {
+        let grid_config = generate_config(
+            "
+            .....
+            .....
+            .....
+            .....
+            .....
+            ",
+        );
+
+        let result =
+            find_fill(&grid_config.to_config_ref(), None, None).expect("Failed to find a fill");
+
+        let entries = grid_entries(&grid_config.to_config_ref(), &result.choices);
+
+        // Five across entries and five down ones, each one a word from the list.
+        assert_eq!(entries.len(), 10);
+
+        for entry in &entries {
+            assert_eq!(entry.normalized_string.as_ref().unwrap().chars().count(), 5);
+            assert!(
+                entry.is_in_word_list(),
+                "entry {:?} isn't in the word list",
+                entry.normalized_string
+            );
+        }
+    }
+
+    #[test]
+    fn test_grid_entries_flags_prefilled_non_words() {
+        // Every slot here is fully specified by the input grid, and none of them are real words.
+        let grid_config = generate_config(
+            "
+            xzq##
+            qjx##
+            xqj##
+            #####
+            #####
+            ",
+        );
+
+        let result =
+            find_fill(&grid_config.to_config_ref(), None, None).expect("Failed to find a fill");
+
+        let entries = grid_entries(&grid_config.to_config_ref(), &result.choices);
+
+        assert_eq!(entries.len(), 6);
+
+        for entry in &entries {
+            assert!(
+                !entry.is_in_word_list(),
+                "entry {:?} shouldn't be in the word list",
+                entry.normalized_string
+            );
+            assert!(entry.canonical_string.is_none());
+            assert!(entry.score.is_none());
+        }
     }
 
     #[test]

@@ -1,7 +1,10 @@
 use clap::Parser;
-use ingrid_core::backtracking_search::find_fill;
-use ingrid_core::grid_config::{generate_grid_config_from_template_string, render_grid};
+use ingrid_core::backtracking_search::find_fill_with_seed;
+use ingrid_core::grid_config::{
+    generate_grid_config_from_template_string, grid_entries, render_grid, Direction,
+};
 use ingrid_core::word_list::{WordList, WordListSourceConfig, WordListSourceConfigProvider};
+use rand::prelude::*;
 use std::collections::HashSet;
 use std::fmt::{Debug, Formatter};
 use std::fs;
@@ -32,6 +35,19 @@ struct Args {
     /// Print timing information along with the grid
     #[arg(short, long, default_value_t = false)]
     time: bool,
+
+    /// Print the list of words used in the filled grid
+    #[arg(short = 'w', long, default_value_t = false)]
+    print_words: bool,
+
+    /// Shuffle the printed word list instead of listing entries in grid order, so it can be used
+    /// as puzzle input. Across and down stay separate, and positions are omitted.
+    #[arg(short = 's', long, default_value_t = false)]
+    shuffle_words: bool,
+
+    /// Seed for the fill search; different seeds give different fills for the same grid
+    #[arg(long, default_value_t = 0)]
+    seed: u64,
 }
 
 struct Error(String);
@@ -70,7 +86,9 @@ fn main() -> Result<(), Error> {
         return Err(Error("Rows in grid must all be the same length".into()));
     }
 
-    let width = raw_grid_content.lines().next().unwrap().chars().count() - 1;
+    // `lines()` doesn't include the line terminators, so this is the true width. Getting it wrong
+    // matters because `max_side` bounds the lengths of the words we load into the word list.
+    let width = raw_grid_content.lines().next().unwrap().chars().count();
     let max_side = width.max(height);
 
     if !args
@@ -128,7 +146,7 @@ fn main() -> Result<(), Error> {
     let grid_config =
         generate_grid_config_from_template_string(word_list, &raw_grid_content, args.min_score);
 
-    let result = find_fill(&grid_config.to_config_ref(), None, None)
+    let result = find_fill_with_seed(&grid_config.to_config_ref(), None, None, args.seed)
         .map_err(|_| Error("Unfillable grid".into()))?;
 
     let fill_time = start.elapsed() - word_list_time;
@@ -137,6 +155,50 @@ fn main() -> Result<(), Error> {
         "{}",
         render_grid(&grid_config.to_config_ref(), &result.choices).replace('.', "#")
     );
+
+    if args.print_words || args.shuffle_words {
+        let entries = grid_entries(&grid_config.to_config_ref(), &result.choices);
+
+        for direction in [Direction::Across, Direction::Down] {
+            let mut group: Vec<_> = entries
+                .iter()
+                .filter(|entry| entry.direction == direction)
+                .collect();
+
+            if args.shuffle_words {
+                // Shuffling each direction separately keeps the two clue lists apart, the way a
+                // "find the right place for the solutions" puzzle presents them.
+                let mut rng: SmallRng = SeedableRng::seed_from_u64(args.seed);
+                group.shuffle(&mut rng);
+            }
+
+            println!(
+                "\n{}:",
+                match direction {
+                    Direction::Across => "Across",
+                    Direction::Down => "Down",
+                }
+            );
+
+            for entry in group {
+                let word = entry.normalized_string.as_deref().unwrap_or("?");
+                let note = if entry.is_in_word_list() {
+                    ""
+                } else {
+                    " (not in word list)"
+                };
+
+                if args.shuffle_words {
+                    // Positions would give the placement away, which is the point of the puzzle.
+                    println!("  {word}{note}");
+                } else {
+                    // Coords are one-indexed row and column, to match the rendered grid.
+                    let (x, y) = entry.start_cell;
+                    println!("  r{}c{} {}{}", y + 1, x + 1, word, note);
+                }
+            }
+        }
+    }
 
     if args.time {
         eprintln!("{word_list_time:?} loading word list, {fill_time:?} finding fill");
