@@ -21,7 +21,7 @@ TUER | Eingang | Pforte | Mit der … ins Haus fallen
 SKI | Brett im Schnee | Wintersportgerät | … und Rodel gut
 AR | Flächenmaß | 100 Quadratmeter | Argon (chem.)
 ELF | Fußballmannschaft | Zahl nach zehn | Naturgeist
-FELD | Acker | Spielfläche | Kästchen im Formular
+FELD | Spielfläche | Kästchen im Formular | Magnet… (Physik)
 OB | Konjunktion: falls | Oberbürgermeister (Abk.) | „Weißt du, … er kommt?“
 NEON | Edelgas | Leuchtreklame-Gas | Ne im Periodensystem
 ARM | Gliedmaße | Mittellos | Teil eines Flusses
@@ -43,5 +43,5 @@ HIRN | Denkorgan | Verstand | Grips
 GEMAESS | Entsprechend | Laut, nach | Angemessen
 REN | Nordisches Hirschtier | Zugtier der Samen | Tier der Tundra
 DNS | Erbsubstanz (Abk.) | Genetischer Code (Abk.) | Doppelhelix (Abk.)
-ACKER | Feld | Bestellter Boden | Land des Bauern
+ACKER | Bestellter Boden | Land des Bauern | Wird gepflügt
 STEIN | Fels | Kiesel | Baustoff der Mauer

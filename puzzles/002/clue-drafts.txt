@@ -30,7 +30,7 @@ WINDSOR | Englisches Königshaus | Schloss bei London | Krawattenknoten
 NEWCOMER | Neuling | Shootingstar | Frischling in der Branche
 BALI | Indonesische Insel | Ferieninsel östlich von Java | Insel der Götter
 ARIE | Sologesang in der Oper | Lied der Diva | Opern-Solo
-SEE | Binnengewässer | Bodensee oder Chiemsee | Meer (die …)
+SEE | Binnengewässer | Ort für Ruderboote | Meer (die …)
 UNI | Hochschule, kurz | Einfarbig (Stoff) | Campus-Kürzel
 EURASIEN | Europa plus Asien | Größte Landmasse | Doppelkontinent
 LOT | Senkblei | Neffe Abrahams | Altes Gewichtsmaß
@@ -38,7 +38,7 @@ NAH | Nicht weit | Benachbart | Gegenteil von fern
 BEFASSEN | Sich beschäftigen | Sich auseinandersetzen | Behandeln
 ET | Und (lat.) | Außerirdischer im Film | „… tu, Brute?“
 SED | DDR-Staatspartei (Abk.) | Partei Honeckers (Abk.) | Einheitspartei (Abk.)
-DIA | Lichtbild | Diapositiv, kurz | Urlaubsfoto zum Projizieren
+DIA | Lichtbild | Projektionsbild | Urlaubsfoto zum Projizieren
 LAN | Lokales Netzwerk (Abk.) | Heimnetz (Abk.) | … -Party
 SRI | Ehrentitel in Indien | … Lanka | Hindi: Herr
 ABT | Klostervorsteher | Mönchsoberhaupt | Würdenträger im Kloster
