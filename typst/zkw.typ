@@ -62,11 +62,32 @@
   }
 }
 
-// One direction's clues as a single column under its heading.
-#let clue-list(title, texts) = {
+// Index of the hint word's clue in one direction's list, or none. Matched by position, so a word
+// that happens to occur in both directions can't be confused.
+#let hint-index(p, dir) = {
+  let h = p.hint_word
+  if h.dir != dir { return none }
+  let entries = p.at(dir)
+  for (i, e) in entries.enumerate() {
+    if e.row == h.row and e.col == h.col { return i }
+  }
+  panic("hint word not found in the " + dir + " list")
+}
+
+// One direction's clues as a single column under its heading. The hint word's clue is struck
+// through, as if a solver had already filled it in.
+#let clue-list(title, texts, struck: none) = {
   block(below: 3mm, text(weight: "bold", size: 11pt, title))
   set par(leading: 0.45em, hanging-indent: 3mm)
-  texts.map(t => block(above: 0pt, below: 1.6mm, breakable: false, [– #t])).join()
+  texts
+    .enumerate()
+    .map(((i, t)) => block(
+      above: 0pt,
+      below: 1.6mm,
+      breakable: false,
+      if i == struck { strike(stroke: 0.8pt)[– #t] } else [– #t],
+    ))
+    .join()
 }
 
 #let puzzle-page(p, clues: none, cell: 10mm) = {
@@ -83,8 +104,8 @@
   grid(
     columns: (1fr, 1fr),
     column-gutter: 8mm,
-    clue-list("Waagerecht", clue-texts(p, clues, "across")),
-    clue-list("Senkrecht", clue-texts(p, clues, "down")),
+    clue-list("Waagerecht", clue-texts(p, clues, "across"), struck: hint-index(p, "across")),
+    clue-list("Senkrecht", clue-texts(p, clues, "down"), struck: hint-index(p, "down")),
   )
 }
 

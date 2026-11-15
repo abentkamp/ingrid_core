@@ -12,6 +12,9 @@ the German word list is in `german-puzzle-setup.md`.
   - every occurrence of one letter, picked at random from the grid's 4 most frequent letters.
 - The clues are shuffled and split into *Waagerecht* and *Senkrecht*, with no letter counts. The
   solver has to work out which clue belongs to which slot.
+- The hint word gets a clue like every other entry. The PDF prints it at its (random) place in the
+  list, struck through, as if someone had started solving. The template finds it by the hint word's
+  position and direction in `puzzle.json`; nothing extra goes into `clues.json`.
 - Umlauts are written AE/OE/UE in the grid (one letter per cell).
 
 ## Rules
@@ -145,7 +148,9 @@ puzzle, and `### Waagerecht` / `### Senkrecht` subsections in `puzzle.json` orde
 - [ ] Eigener Vorschlag: …
 ```
 
-The length is shown only in the doc, never in the PDF. Ticked items show struck through in the doc;
+The length is shown only in the doc, never in the PDF. Under the hint word's bold line, add the
+italic note "*Lösungshilfe: Dieses Wort steht im Gitter, sein Hinweis erscheint im PDF
+durchgestrichen.*" so the user knows that clue will appear crossed out. Ticked items show struck through in the doc;
 the doc's intro explains that this means "selected".
 
 ### 5. Read the choices back

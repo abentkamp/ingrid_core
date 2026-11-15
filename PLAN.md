@@ -197,6 +197,8 @@ therefore driven by a **quality score**, not just legality.
     or letter counts. Budget: ~46 clues ≈ 24 lines per direction pair at 10 pt ≈ 120 mm, so
     header + grid + clues ≈ 225 mm of the 267 mm text height. The font size is a fixed
     parameter, chosen after looking at the pilot pages.
+    The hint word's clue appears at its random place in the list, struck through, as if someone had
+    started solving.
   - **Solution page:** "Lösung Nr. 1" with the filled grid, no special marking of the hints.
 - **Build files:**
   - `typst/einzeln.typ` → `puzzles/NNN/puzzle-NNN.pdf` (puzzle on page 1, solution on page 2).
