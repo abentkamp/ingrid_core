@@ -1,0 +1,23 @@
+{
+  "series": "Zuordnungs-Kreuzwort",
+  "puzzles": [
+    {
+      "number": 1,
+      "dir": "001",
+      "puzzle": "/puzzles/001/puzzle.json",
+      "clues": "/puzzles/001/clues.json"
+    },
+    {
+      "number": 2,
+      "dir": "002",
+      "puzzle": "/puzzles/002/puzzle.json",
+      "clues": "/puzzles/002/clues.json"
+    },
+    {
+      "number": 3,
+      "dir": "003",
+      "puzzle": "/puzzles/003/puzzle.json",
+      "clues": "/puzzles/003/clues.json"
+    }
+  ]
+}

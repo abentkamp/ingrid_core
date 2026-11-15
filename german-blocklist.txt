@@ -1,0 +1,55 @@
+# Words from wordlist.txt that break the Zuordnungs-Kreuzwort rules (see PLAN.md).
+# Allowed: base forms, plurals, infinitives, adjective base forms, lexicalized participles,
+# proper names, abbreviations, and ambiguous words if one reading qualifies.
+# One word per line; the comment gives the reason.
+DAR       # nur Verbpartikel (darstellen)
+DES       # Artikel, Genitiv
+ERLIESS   # Präteritum von erlassen
+GALT      # Präteritum von gelten
+IHM       # Pronomen, Dativ
+LAG       # Präteritum von liegen
+SIEHT     # 3. Person von sehen
+ANFAENGT  # 3. Person von anfangen
+DEM       # Artikel, Dativ
+DEN       # Artikel, Akkusativ/Dativ Plural
+GEWIDMET  # Partizip, nicht lexikalisiert
+RANNTE    # Präteritum von rennen
+ABZUTRETEN # zu-Infinitiv
+AELTER    # Komparativ
+ANSAH     # Präteritum von ansehen
+DIR       # Pronomen, Dativ
+ERLISCHT  # 3. Person von erlöschen
+ERRANG    # Präteritum von erringen
+GROESSTE  # Superlativ
+KUEHEN    # Dativ Plural (Plural: KUEHE)
+AE        # kein Wort (Umschrift von Ä)
+BAT       # Präteritum von bitten
+DIE       # Artikel, flektiert (Grundform DER)
+ERBAT     # Präteritum von erbitten
+GEEINIGT  # Partizip, nicht lexikalisiert
+NEW       # kein deutsches Wort
+ANGELES   # nur in Los Angeles
+HAB       # 1. Person, umgangssprachlich
+NATURA    # nur in "in natura"
+STRITTEN  # Präteritum von streiten
+ZUGAB     # Präteritum von zugeben
+GRAEBT    # 3. Person von graben
+IHN       # Pronomen, Akkusativ
+LITTEN    # Präteritum von leiden
+ERGAEBE   # Konjunktiv von ergeben
+LAS       # Präteritum von lesen
+GIB       # Imperativ von geben
+TRAF      # Präteritum von treffen
+ALTAEREN  # Dativ Plural (Plural: ALTAERE)
+GAB       # Präteritum von geben
+IST       # 3. Person von sein
+JEDE      # flektiert (Grundform JEDER)
+LUD       # Präteritum von laden
+SEID      # 2. Person Plural von sein
+ANGAB     # Präteritum von angeben
+ANGEKLAGT # Partizip, nicht lexikalisiert
+BESASSEN  # Präteritum von besitzen
+JENE      # flektiert (Grundform JENER)
+ABGEBAUT  # Partizip, nicht lexikalisiert
+NEGRO     # nur in Namen (Rio Negro)
+UEBERWAND # Präteritum von überwinden

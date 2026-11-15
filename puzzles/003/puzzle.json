@@ -1,0 +1,496 @@
+{
+  "series": "Zuordnungs-Kreuzwort",
+  "number": 3,
+  "base_seed": 1000,
+  "pattern_attempt": 2,
+  "fill_seed": 5171562127960435404,
+  "refill_round": 3,
+  "blocklist_commit": null,
+  "wordlist_hash": "28e53fc6c16395c3",
+  "words_checked": true,
+  "solution_hash": "4ccd7564ae3e5d3e",
+  "settings": {
+    "min_score": 50,
+    "max_len": 10,
+    "min_blocks": 20,
+    "max_blocks": 24,
+    "fill_tries": 30
+  },
+  "width": 17,
+  "height": 8,
+  "pattern": [
+    "........#..#.....",
+    "#.........#......",
+    "....#........#...",
+    "#.#...#.......#.#",
+    ".#...#.....#...#.",
+    ".......#.........",
+    "........#......#.",
+    "...#...#..#......"
+  ],
+  "solution": [
+    "GEBLAESE#BP#NACHT",
+    "#HEIMREISE#BINDEN",
+    "LEIB#BEMERKEN#SET",
+    "#R#EHE#ENTENTE#R#",
+    "A#IRA#DRAHT#ENG#O",
+    "SUSANNE#TOTENTANZ",
+    "TRILOGIE#LEIDER#O",
+    "ALS#ION#CD#SONNEN"
+  ],
+  "hint_word": {
+    "word": "SENAT",
+    "row": 2,
+    "col": 9,
+    "dir": "down"
+  },
+  "hint_letter": "E",
+  "revealed_count": 28,
+  "revealed": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      2,
+      16
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      4,
+      14
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      5,
+      13
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      8,
+      16
+    ]
+  ],
+  "across": [
+    {
+      "word": "ALS",
+      "row": 8,
+      "col": 1,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "BINDEN",
+      "row": 2,
+      "col": 12,
+      "len": 6,
+      "score": 55
+    },
+    {
+      "word": "BEMERKEN",
+      "row": 3,
+      "col": 6,
+      "len": 8,
+      "score": 50
+    },
+    {
+      "word": "IRA",
+      "row": 5,
+      "col": 3,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "ENG",
+      "row": 5,
+      "col": 13,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "TRILOGIE",
+      "row": 7,
+      "col": 1,
+      "len": 8,
+      "score": 50
+    },
+    {
+      "word": "NACHT",
+      "row": 1,
+      "col": 13,
+      "len": 5,
+      "score": 55
+    },
+    {
+      "word": "SONNEN",
+      "row": 8,
+      "col": 12,
+      "len": 6,
+      "score": 50
+    },
+    {
+      "word": "SET",
+      "row": 3,
+      "col": 15,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "GEBLAESE",
+      "row": 1,
+      "col": 1,
+      "len": 8,
+      "score": 50
+    },
+    {
+      "word": "TOTENTANZ",
+      "row": 6,
+      "col": 9,
+      "len": 9,
+      "score": 50
+    },
+    {
+      "word": "EHE",
+      "row": 4,
+      "col": 4,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "LEIB",
+      "row": 3,
+      "col": 1,
+      "len": 4,
+      "score": 55
+    },
+    {
+      "word": "CD",
+      "row": 8,
+      "col": 9,
+      "len": 2,
+      "score": 55
+    },
+    {
+      "word": "HEIMREISE",
+      "row": 2,
+      "col": 2,
+      "len": 9,
+      "score": 50
+    },
+    {
+      "word": "LEIDER",
+      "row": 7,
+      "col": 10,
+      "len": 6,
+      "score": 55
+    },
+    {
+      "word": "ENTENTE",
+      "row": 4,
+      "col": 8,
+      "len": 7,
+      "score": 50
+    },
+    {
+      "word": "BP",
+      "row": 1,
+      "col": 10,
+      "len": 2,
+      "score": 50
+    },
+    {
+      "word": "DRAHT",
+      "row": 5,
+      "col": 7,
+      "len": 5,
+      "score": 50
+    },
+    {
+      "word": "SUSANNE",
+      "row": 6,
+      "col": 1,
+      "len": 7,
+      "score": 55
+    },
+    {
+      "word": "ION",
+      "row": 8,
+      "col": 5,
+      "len": 3,
+      "score": 50
+    }
+  ],
+  "down": [
+    {
+      "word": "NINTENDO",
+      "row": 1,
+      "col": 13,
+      "len": 8,
+      "score": 50
+    },
+    {
+      "word": "ASTA",
+      "row": 5,
+      "col": 1,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "SEE",
+      "row": 1,
+      "col": 7,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "ERBE",
+      "row": 1,
+      "col": 6,
+      "len": 4,
+      "score": 55
+    },
+    {
+      "word": "GARN",
+      "row": 5,
+      "col": 15,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "ISIS",
+      "row": 5,
+      "col": 3,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "URL",
+      "row": 6,
+      "col": 2,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "NGO",
+      "row": 6,
+      "col": 6,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "BEI",
+      "row": 1,
+      "col": 3,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "SENAT",
+      "row": 2,
+      "col": 9,
+      "len": 5,
+      "score": 55
+    },
+    {
+      "word": "KETTE",
+      "row": 3,
+      "col": 11,
+      "len": 5,
+      "score": 55
+    },
+    {
+      "word": "DEIN",
+      "row": 5,
+      "col": 7,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "HANOI",
+      "row": 4,
+      "col": 5,
+      "len": 5,
+      "score": 50
+    },
+    {
+      "word": "TNT",
+      "row": 1,
+      "col": 17,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "BERTHOLD",
+      "row": 1,
+      "col": 10,
+      "len": 8,
+      "score": 50
+    },
+    {
+      "word": "AM",
+      "row": 1,
+      "col": 5,
+      "len": 2,
+      "score": 55
+    },
+    {
+      "word": "HEER",
+      "row": 1,
+      "col": 16,
+      "len": 4,
+      "score": 55
+    },
+    {
+      "word": "EIS",
+      "row": 6,
+      "col": 12,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "BEN",
+      "row": 2,
+      "col": 12,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "EIMER",
+      "row": 1,
+      "col": 8,
+      "len": 5,
+      "score": 50
+    },
+    {
+      "word": "EHER",
+      "row": 1,
+      "col": 2,
+      "len": 4,
+      "score": 55
+    },
+    {
+      "word": "CDS",
+      "row": 1,
+      "col": 15,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "LIBERAL",
+      "row": 1,
+      "col": 4,
+      "len": 7,
+      "score": 50
+    },
+    {
+      "word": "AN",
+      "row": 1,
+      "col": 14,
+      "len": 2,
+      "score": 55
+    },
+    {
+      "word": "ENTEN",
+      "row": 4,
+      "col": 14,
+      "len": 5,
+      "score": 50
+    },
+    {
+      "word": "OZON",
+      "row": 5,
+      "col": 17,
+      "len": 4,
+      "score": 50
+    }
+  ]
+}
