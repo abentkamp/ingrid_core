@@ -68,6 +68,9 @@ enum Cmd {
         /// Refill even if the words were approved, clues exist, or the round cap is reached
         #[arg(long)]
         force: bool,
+        /// Discard the current pattern and generate a new one (e.g. after a pattern rule changed)
+        #[arg(long)]
+        new_pattern: bool,
         #[command(flatten)]
         opts: FillOpts,
     },
@@ -509,6 +512,7 @@ fn puzzle_json(
             "min_blocks": opts.min_blocks,
             "max_blocks": opts.max_blocks,
             "fill_tries": opts.fill_tries,
+            "require_crossed_two_letter_entries": true,
         },
         "width": pattern.width,
         "height": pattern.height,
@@ -650,7 +654,7 @@ fn cmd_generate(
     rebuild_index(out)
 }
 
-fn cmd_refill(dir: &Path, force: bool, opts: &FillOpts) -> Result<()> {
+fn cmd_refill(dir: &Path, force: bool, new_pattern: bool, opts: &FillOpts) -> Result<()> {
     let old = read_puzzle(dir)?;
     if !force {
         if old["words_checked"].as_bool() == Some(true) {
@@ -691,7 +695,10 @@ fn cmd_refill(dir: &Path, force: bool, opts: &FillOpts) -> Result<()> {
     let pattern = Pattern::from_template(&template)?;
     let fill_seed = derive_seed(base_seed, number, STREAM_FILL, old_attempt);
 
-    let (attempt, pattern, fill, fill_seed) =
+    let (attempt, pattern, fill, fill_seed) = if new_pattern {
+        eprintln!("  Nr. {number}: generating a new pattern");
+        find_puzzle(base_seed, number, old_attempt + 1, &words, opts)?
+    } else {
         match try_fill(&words.words, &pattern, fill_seed, opts)? {
             FillOutcome::Filled(fill, elapsed) => {
                 eprintln!("  Nr. {number}: same pattern refilled in {elapsed:.2?}");
@@ -701,7 +708,8 @@ fn cmd_refill(dir: &Path, force: bool, opts: &FillOpts) -> Result<()> {
                 eprintln!("  Nr. {number}: pattern no longer fills, generating a new one");
                 find_puzzle(base_seed, number, old_attempt + 1, &words, opts)?
             }
-        };
+        }
+    };
 
     let meta = PuzzleMeta {
         number,
@@ -864,7 +872,12 @@ fn main() -> Result<()> {
             force,
             opts,
         } => cmd_generate(*count, *start, *seed, out, *force, opts),
-        Cmd::Refill { dir, force, opts } => cmd_refill(dir, *force, opts),
+        Cmd::Refill {
+            dir,
+            force,
+            new_pattern,
+            opts,
+        } => cmd_refill(dir, *force, *new_pattern, opts),
         Cmd::Unchecked { dirs, lists } => cmd_unchecked(dirs, lists),
         Cmd::Approve { dir, lists } => cmd_approve(dir, lists),
         Cmd::Pattern {

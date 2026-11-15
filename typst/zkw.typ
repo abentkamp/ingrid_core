@@ -62,17 +62,11 @@
   }
 }
 
+// One direction's clues as a single column under its heading.
 #let clue-list(title, texts) = {
   block(below: 3mm, text(weight: "bold", size: 11pt, title))
   set par(leading: 0.45em, hanging-indent: 3mm)
-  // Split explicitly: `columns` would fill the first column to the page bottom first.
-  let half = calc.ceil(texts.len() / 2)
-  let column(items) = items.map(t => block(above: 0pt, below: 1.6mm, breakable: false, [– #t])).join()
-  grid(
-    columns: (1fr, 1fr),
-    column-gutter: 8mm,
-    column(texts.slice(0, half)), column(texts.slice(half)),
-  )
+  texts.map(t => block(above: 0pt, below: 1.6mm, breakable: false, [– #t])).join()
 }
 
 #let puzzle-page(p, clues: none, cell: 10mm) = {
@@ -85,9 +79,13 @@
   v(4mm)
   align(center, puzzle-grid(p, cell: cell))
   v(7mm)
-  clue-list("Waagerecht", clue-texts(p, clues, "across"))
-  v(4mm)
-  clue-list("Senkrecht", clue-texts(p, clues, "down"))
+  // Waagerecht on the left, Senkrecht on the right.
+  grid(
+    columns: (1fr, 1fr),
+    column-gutter: 8mm,
+    clue-list("Waagerecht", clue-texts(p, clues, "across")),
+    clue-list("Senkrecht", clue-texts(p, clues, "down")),
+  )
 }
 
 #let solution-block(p, cell: 10mm) = {

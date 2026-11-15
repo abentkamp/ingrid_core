@@ -28,6 +28,9 @@ pub struct PatternConfig {
     /// Hard rule: no two blocks may share an edge.
     pub forbid_adjacent_blocks: bool,
 
+    /// Hard rule: both letters of every 2-letter entry must also belong to a crossing entry.
+    pub require_crossed_two_letter_entries: bool,
+
     /// Entries longer than this are "long": allowed, but penalized.
     pub long_threshold: usize,
 
@@ -66,6 +69,7 @@ impl PatternConfig {
             max_blocks: 24,
             max_len: 10,
             forbid_adjacent_blocks: true,
+            require_crossed_two_letter_entries: true,
             long_threshold: 8,
             max_long_entries: 2,
             max_two_letter_entries: 4,
@@ -120,6 +124,9 @@ pub struct PatternStats {
 
     /// White cells that belong to exactly one entry.
     pub single_entry_cells: usize,
+
+    /// Cells of 2-letter entries that no crossing entry runs through.
+    pub uncrossed_two_letter_cells: usize,
 
     /// Number of connected components of white cells.
     pub components: usize,
@@ -235,6 +242,7 @@ impl Pattern {
         };
 
         let mut entry_count_by_cell = vec![0u8; self.blocks.len()];
+        let mut two_letter_cells = vec![];
         for run in self.runs() {
             stats.excess_length += run.len.saturating_sub(max_len);
             if run.len < 2 {
@@ -254,8 +262,15 @@ impl Pattern {
                     Dir::Down => (run.row + i, run.col),
                 };
                 entry_count_by_cell[row * self.width + col] += 1;
+                if run.len == 2 {
+                    two_letter_cells.push(row * self.width + col);
+                }
             }
         }
+        stats.uncrossed_two_letter_cells = two_letter_cells
+            .iter()
+            .filter(|&&idx| entry_count_by_cell[idx] < 2)
+            .count();
         for (idx, &block) in self.blocks.iter().enumerate() {
             if block {
                 continue;
@@ -332,6 +347,11 @@ pub fn hard_violations(stats: &PatternStats, config: &PatternConfig) -> usize {
         + stats.components.saturating_sub(1)
         + if config.forbid_adjacent_blocks {
             stats.adjacent_block_pairs
+        } else {
+            0
+        }
+        + if config.require_crossed_two_letter_entries {
+            stats.uncrossed_two_letter_cells
         } else {
             0
         }
@@ -466,6 +486,7 @@ mod tests {
         assert_eq!(stats.orphan_cells, 0);
         assert_eq!(stats.components, 1);
         assert_eq!(stats.adjacent_block_pairs, 0);
+        assert_eq!(stats.uncrossed_two_letter_cells, 0);
     }
 
     #[test]
@@ -503,6 +524,17 @@ mod tests {
     fn detects_disconnected_regions() {
         let pattern = Pattern::from_template("..#..\n..#..\n").unwrap();
         assert_eq!(pattern.stats(10, 8).components, 2);
+    }
+
+    #[test]
+    fn detects_uncrossed_two_letter_entries() {
+        // Across "..": the left cell is crossed by a down entry, the right one is not.
+        let pattern = Pattern::from_template("..#\n.##\n").unwrap();
+        let stats = pattern.stats(10, 8);
+        assert_eq!(stats.two_letter_entries, 2);
+        assert_eq!(stats.uncrossed_two_letter_cells, 2);
+        let pattern = Pattern::from_template("..\n..\n").unwrap();
+        assert_eq!(pattern.stats(10, 8).uncrossed_two_letter_cells, 0);
     }
 
     #[test]

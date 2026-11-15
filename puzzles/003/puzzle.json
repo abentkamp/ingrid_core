@@ -2,150 +2,99 @@
   "series": "Zuordnungs-Kreuzwort",
   "number": 3,
   "base_seed": 1000,
-  "pattern_attempt": 2,
-  "fill_seed": 5171562127960435404,
-  "refill_round": 3,
-  "blocklist_commit": null,
-  "wordlist_hash": "28e53fc6c16395c3",
+  "pattern_attempt": 4,
+  "fill_seed": 11990350398207730634,
+  "refill_round": 21,
+  "blocklist_commit": "d8ddae3e8c3bd56a730c4810c35ed3ba874f1655+dirty",
+  "wordlist_hash": "03b0eb7d4e983d3b",
   "words_checked": true,
-  "solution_hash": "4ccd7564ae3e5d3e",
+  "solution_hash": "6045e43a892ced34",
   "settings": {
     "min_score": 50,
     "max_len": 10,
     "min_blocks": 20,
     "max_blocks": 24,
-    "fill_tries": 30
+    "fill_tries": 30,
+    "require_crossed_two_letter_entries": true
   },
   "width": 17,
   "height": 8,
   "pattern": [
-    "........#..#.....",
-    "#.........#......",
-    "....#........#...",
-    "#.#...#.......#.#",
-    ".#...#.....#...#.",
-    ".......#.........",
-    "........#......#.",
-    "...#...#..#......"
+    "......#.#......#.",
+    "..........#......",
+    "......#........#.",
+    ".#.#.#.#....#...#",
+    "..#.......#......",
+    "........#....#...",
+    ".....#.....#.....",
+    "#...#...#...#...."
   ],
   "solution": [
-    "GEBLAESE#BP#NACHT",
-    "#HEIMREISE#BINDEN",
-    "LEIB#BEMERKEN#SET",
-    "#R#EHE#ENTENTE#R#",
-    "A#IRA#DRAHT#ENG#O",
-    "SUSANNE#TOTENTANZ",
-    "TRILOGIE#LEIDER#O",
-    "ALS#ION#CD#SONNEN"
+    "GEFAHR#D#ELSASS#P",
+    "EHEMAENNER#PLAYER",
+    "MELDEN#SCHIITEN#O",
+    "A#D#U#T#HAIN#GAR#",
+    "ES#ETHANOL#NAEGEL",
+    "SEEREISE#TUER#ODE",
+    "SPION#TOKEN#MAGEN",
+    "#PDS#BEN#NIL#BENZ"
   ],
   "hint_word": {
-    "word": "SENAT",
-    "row": 2,
-    "col": 9,
-    "dir": "down"
+    "word": "SPION",
+    "row": 7,
+    "col": 1,
+    "dir": "across"
   },
-  "hint_letter": "E",
-  "revealed_count": 28,
+  "hint_letter": "N",
+  "revealed_count": 17,
   "revealed": [
     [
-      1,
-      2
-    ],
-    [
-      1,
-      6
-    ],
-    [
-      1,
-      8
+      2,
+      7
     ],
     [
       2,
+      8
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      15
+    ],
+    [
+      4,
+      12
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      12
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
       3
     ],
     [
-      2,
-      7
-    ],
-    [
-      2,
-      9
-    ],
-    [
-      2,
-      10
-    ],
-    [
-      2,
-      16
-    ],
-    [
-      3,
-      2
-    ],
-    [
-      3,
-      7
-    ],
-    [
-      3,
-      9
-    ],
-    [
-      3,
-      12
-    ],
-    [
-      3,
-      16
-    ],
-    [
-      4,
+      7,
       4
     ],
     [
-      4,
-      6
-    ],
-    [
-      4,
-      8
-    ],
-    [
-      4,
-      9
-    ],
-    [
-      4,
-      11
-    ],
-    [
-      4,
-      14
-    ],
-    [
-      5,
-      9
-    ],
-    [
-      5,
-      13
-    ],
-    [
-      6,
-      7
-    ],
-    [
-      6,
-      9
-    ],
-    [
-      6,
-      12
-    ],
-    [
       7,
-      8
+      5
     ],
     [
       7,
@@ -153,7 +102,15 @@
     ],
     [
       7,
-      14
+      17
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      10
     ],
     [
       8,
@@ -162,335 +119,338 @@
   ],
   "across": [
     {
-      "word": "ALS",
-      "row": 8,
-      "col": 1,
-      "len": 3,
-      "score": 55
-    },
-    {
-      "word": "BINDEN",
-      "row": 2,
-      "col": 12,
-      "len": 6,
-      "score": 55
-    },
-    {
-      "word": "BEMERKEN",
-      "row": 3,
-      "col": 6,
-      "len": 8,
-      "score": 50
-    },
-    {
-      "word": "IRA",
-      "row": 5,
-      "col": 3,
-      "len": 3,
-      "score": 50
-    },
-    {
-      "word": "ENG",
-      "row": 5,
-      "col": 13,
-      "len": 3,
-      "score": 55
-    },
-    {
-      "word": "TRILOGIE",
+      "word": "TOKEN",
       "row": 7,
-      "col": 1,
-      "len": 8,
-      "score": 50
-    },
-    {
-      "word": "NACHT",
-      "row": 1,
-      "col": 13,
-      "len": 5,
-      "score": 55
-    },
-    {
-      "word": "SONNEN",
-      "row": 8,
-      "col": 12,
-      "len": 6,
-      "score": 50
-    },
-    {
-      "word": "SET",
-      "row": 3,
-      "col": 15,
-      "len": 3,
-      "score": 50
-    },
-    {
-      "word": "GEBLAESE",
-      "row": 1,
-      "col": 1,
-      "len": 8,
-      "score": 50
-    },
-    {
-      "word": "TOTENTANZ",
-      "row": 6,
-      "col": 9,
-      "len": 9,
-      "score": 50
-    },
-    {
-      "word": "EHE",
-      "row": 4,
-      "col": 4,
-      "len": 3,
-      "score": 55
-    },
-    {
-      "word": "LEIB",
-      "row": 3,
-      "col": 1,
-      "len": 4,
-      "score": 55
-    },
-    {
-      "word": "CD",
-      "row": 8,
-      "col": 9,
-      "len": 2,
-      "score": 55
-    },
-    {
-      "word": "HEIMREISE",
-      "row": 2,
-      "col": 2,
-      "len": 9,
-      "score": 50
-    },
-    {
-      "word": "LEIDER",
-      "row": 7,
-      "col": 10,
-      "len": 6,
-      "score": 55
-    },
-    {
-      "word": "ENTENTE",
-      "row": 4,
-      "col": 8,
-      "len": 7,
-      "score": 50
-    },
-    {
-      "word": "BP",
-      "row": 1,
-      "col": 10,
-      "len": 2,
-      "score": 50
-    },
-    {
-      "word": "DRAHT",
-      "row": 5,
       "col": 7,
       "len": 5,
       "score": 50
     },
     {
-      "word": "SUSANNE",
-      "row": 6,
+      "word": "ES",
+      "row": 5,
       "col": 1,
-      "len": 7,
+      "len": 2,
       "score": 55
     },
     {
-      "word": "ION",
+      "word": "SCHIITEN",
+      "row": 3,
+      "col": 8,
+      "len": 8,
+      "score": 50
+    },
+    {
+      "word": "GEFAHR",
+      "row": 1,
+      "col": 1,
+      "len": 6,
+      "score": 55
+    },
+    {
+      "word": "BENZ",
       "row": 8,
-      "col": 5,
+      "col": 14,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "SPION",
+      "row": 7,
+      "col": 1,
+      "len": 5,
+      "score": 50
+    },
+    {
+      "word": "NAEGEL",
+      "row": 5,
+      "col": 12,
+      "len": 6,
+      "score": 50
+    },
+    {
+      "word": "SEEREISE",
+      "row": 6,
+      "col": 1,
+      "len": 8,
+      "score": 50
+    },
+    {
+      "word": "ELSASS",
+      "row": 1,
+      "col": 10,
+      "len": 6,
+      "score": 50
+    },
+    {
+      "word": "MELDEN",
+      "row": 3,
+      "col": 1,
+      "len": 6,
+      "score": 55
+    },
+    {
+      "word": "PDS",
+      "row": 8,
+      "col": 2,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "HAIN",
+      "row": 4,
+      "col": 9,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "MAGEN",
+      "row": 7,
+      "col": 13,
+      "len": 5,
+      "score": 50
+    },
+    {
+      "word": "NIL",
+      "row": 8,
+      "col": 10,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "ETHANOL",
+      "row": 5,
+      "col": 4,
+      "len": 7,
+      "score": 50
+    },
+    {
+      "word": "BEN",
+      "row": 8,
+      "col": 6,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "GAR",
+      "row": 4,
+      "col": 14,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "EHEMAENNER",
+      "row": 2,
+      "col": 1,
+      "len": 10,
+      "score": 50
+    },
+    {
+      "word": "PLAYER",
+      "row": 2,
+      "col": 12,
+      "len": 6,
+      "score": 50
+    },
+    {
+      "word": "TUER",
+      "row": 6,
+      "col": 10,
+      "len": 4,
+      "score": 55
+    },
+    {
+      "word": "ODE",
+      "row": 6,
+      "col": 15,
       "len": 3,
       "score": 50
     }
   ],
   "down": [
     {
-      "word": "NINTENDO",
-      "row": 1,
-      "col": 13,
-      "len": 8,
-      "score": 50
-    },
-    {
-      "word": "ASTA",
-      "row": 5,
-      "col": 1,
-      "len": 4,
-      "score": 50
-    },
-    {
-      "word": "SEE",
-      "row": 1,
-      "col": 7,
-      "len": 3,
-      "score": 55
-    },
-    {
-      "word": "ERBE",
-      "row": 1,
-      "col": 6,
-      "len": 4,
-      "score": 55
-    },
-    {
-      "word": "GARN",
-      "row": 5,
-      "col": 15,
-      "len": 4,
-      "score": 50
-    },
-    {
-      "word": "ISIS",
-      "row": 5,
-      "col": 3,
-      "len": 4,
-      "score": 50
-    },
-    {
-      "word": "URL",
-      "row": 6,
-      "col": 2,
-      "len": 3,
-      "score": 50
-    },
-    {
-      "word": "NGO",
-      "row": 6,
-      "col": 6,
-      "len": 3,
-      "score": 50
-    },
-    {
-      "word": "BEI",
-      "row": 1,
-      "col": 3,
-      "len": 3,
-      "score": 55
-    },
-    {
-      "word": "SENAT",
-      "row": 2,
-      "col": 9,
-      "len": 5,
-      "score": 55
-    },
-    {
-      "word": "KETTE",
+      "word": "II",
       "row": 3,
       "col": 11,
-      "len": 5,
-      "score": 55
-    },
-    {
-      "word": "DEIN",
-      "row": 5,
-      "col": 7,
-      "len": 4,
-      "score": 50
-    },
-    {
-      "word": "HANOI",
-      "row": 4,
-      "col": 5,
-      "len": 5,
-      "score": 50
-    },
-    {
-      "word": "TNT",
-      "row": 1,
-      "col": 17,
-      "len": 3,
-      "score": 50
-    },
-    {
-      "word": "BERTHOLD",
-      "row": 1,
-      "col": 10,
-      "len": 8,
-      "score": 50
-    },
-    {
-      "word": "AM",
-      "row": 1,
-      "col": 5,
       "len": 2,
       "score": 55
     },
     {
-      "word": "HEER",
+      "word": "PRO",
       "row": 1,
-      "col": 16,
+      "col": 17,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "FELD",
+      "row": 1,
+      "col": 3,
       "len": 4,
       "score": 55
     },
     {
-      "word": "EIS",
-      "row": 6,
-      "col": 12,
-      "len": 3,
+      "word": "AB",
+      "row": 7,
+      "col": 14,
+      "len": 2,
       "score": 55
     },
     {
-      "word": "BEN",
-      "row": 2,
-      "col": 12,
-      "len": 3,
-      "score": 55
-    },
-    {
-      "word": "EIMER",
-      "row": 1,
+      "word": "NEON",
+      "row": 5,
       "col": 8,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "ARM",
+      "row": 5,
+      "col": 13,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "HI",
+      "row": 5,
+      "col": 6,
+      "len": 2,
+      "score": 50
+    },
+    {
+      "word": "EROS",
+      "row": 5,
+      "col": 4,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "UNI",
+      "row": 6,
+      "col": 11,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "SYNAGOGE",
+      "row": 1,
+      "col": 15,
+      "len": 8,
+      "score": 55
+    },
+    {
+      "word": "AMD",
+      "row": 1,
+      "col": 4,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "SPINNE",
+      "row": 1,
+      "col": 12,
+      "len": 6,
+      "score": 50
+    },
+    {
+      "word": "ALT",
+      "row": 1,
+      "col": 13,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "EID",
+      "row": 6,
+      "col": 3,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "TASTE",
+      "row": 4,
+      "col": 7,
       "len": 5,
       "score": 50
     },
     {
-      "word": "EHER",
+      "word": "EHE",
       "row": 1,
       "col": 2,
-      "len": 4,
-      "score": 55
-    },
-    {
-      "word": "CDS",
-      "row": 1,
-      "col": 15,
       "len": 3,
       "score": 55
     },
     {
-      "word": "LIBERAL",
+      "word": "HAEUTEN",
       "row": 1,
-      "col": 4,
+      "col": 5,
       "len": 7,
       "score": 50
     },
     {
-      "word": "AN",
-      "row": 1,
-      "col": 14,
-      "len": 2,
-      "score": 55
-    },
-    {
-      "word": "ENTEN",
-      "row": 4,
-      "col": 14,
-      "len": 5,
+      "word": "SEPP",
+      "row": 5,
+      "col": 2,
+      "len": 4,
       "score": 50
     },
     {
-      "word": "OZON",
+      "word": "ECHO",
+      "row": 2,
+      "col": 9,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "ERHALTEN",
+      "row": 1,
+      "col": 10,
+      "len": 8,
+      "score": 55
+    },
+    {
+      "word": "LENZ",
       "row": 5,
       "col": 17,
       "len": 4,
       "score": 50
+    },
+    {
+      "word": "GEMAESS",
+      "row": 1,
+      "col": 1,
+      "len": 7,
+      "score": 55
+    },
+    {
+      "word": "REN",
+      "row": 1,
+      "col": 6,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "DNS",
+      "row": 1,
+      "col": 8,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "REDEN",
+      "row": 4,
+      "col": 16,
+      "len": 5,
+      "score": 55
+    },
+    {
+      "word": "SAEGE",
+      "row": 1,
+      "col": 14,
+      "len": 5,
+      "score": 50
     }
+  ],
+  "excluded": [
+    "STIELE"
   ]
 }

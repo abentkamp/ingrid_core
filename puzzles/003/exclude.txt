@@ -1,0 +1,2 @@
+# Nur fuer dieses Raetsel ausgeschlossen
+STIELE    # STIEL stand schon im Gitter (Variante)

@@ -73,3 +73,47 @@ LIEH      # Präteritum von leihen
 NANNTEN   # Präteritum von nennen
 LIESS     # Präteritum von lassen
 SAH       # Präteritum von sehen
+ANFING    # Präteritum von anfangen
+DERER     # Demonstrativpronomen, Genitiv Plural
+ERFROREN  # Partizip, nicht lexikalisiert
+UE        # kein Wort (Umschrift von Ü)
+USS       # englisches Schiffskürzel, im Deutschen nicht gebräuchlich
+ERFAND    # Präteritum von erfinden
+GELITTEN  # Partizip, nicht lexikalisiert
+LITT      # Präteritum von leiden
+STAEDTEN  # Dativ Plural (Plural: STAEDTE)
+ERRANGEN  # Präteritum von erringen
+JEHER     # nur in "seit jeher"
+SEIEN     # Konjunktiv von sein
+ANSAHEN   # Präteritum von ansehen
+ERGING    # Präteritum von ergehen
+GEHAENGT  # Partizip, nicht lexikalisiert
+GEROLLT   # Partizip, nicht lexikalisiert
+ZERFAELLT # 3. Person von zerfallen
+ENTKAMEN  # Präteritum von entkommen
+GELISTET  # Partizip, nicht lexikalisiert
+VORKAMEN  # Präteritum von vorkommen
+GEKLAGT   # Partizip, nicht lexikalisiert
+GERETTET  # Partizip, nicht lexikalisiert
+GRUNDE    # Dativ (zu Grunde)
+STETE     # flektiert (Grundform STET)
+AUSSAH    # Präteritum von aussehen
+BEST      # Superlativstamm, kein eigenständiges Wort
+STIEG     # Präteritum von steigen
+BAENKEN   # Dativ Plural (Plural: BAENKE)
+BIST      # 2. Person von sein
+AUSKAM    # Präteritum von auskommen
+SCHWIEG   # Präteritum von schweigen
+KAM       # Präteritum von kommen
+NANNTE    # Präteritum von nennen
+EINHER    # nur Verbpartikel (einhergehen)
+HAETTEN   # Konjunktiv von haben
+UNS       # Pronomen, Dativ/Akkusativ
+WEN       # Pronomen, Akkusativ
+BRENNEND  # Partizip Präsens
+ERGANGEN  # Partizip, nicht lexikalisiert
+LAEDT     # 3. Person von laden
+BETRAF    # Präteritum von betreffen
+INNERN    # Dativ (im Innern)
+STAATE    # Dativ, veraltet (dem Staate)
+ANDERE    # flektiert (Grundform ANDERER)
