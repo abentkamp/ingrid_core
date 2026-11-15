@@ -8,7 +8,7 @@ TYPST=${TYPST:-.tools/typst}
 [ -x "$TYPST" ] || scripts/setup.sh
 
 with_clues=()
-for dir in puzzles/[0-9]*/; do
+for dir in puzzles/[0-9]*; do
   nr=$(basename "$dir")
   [ -f "$dir/puzzle.json" ] || continue
   args=(--root . --input "nr=$nr")
