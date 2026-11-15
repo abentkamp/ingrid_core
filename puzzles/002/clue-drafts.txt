@@ -1,46 +1,47 @@
-RAR | Selten, knapp | Kaum zu bekommen | Wie ein Sammlerstück
-MANDEL | Steinfrucht fürs Marzipan | Organ im Rachen | Fünfzehn Stück, altes Zählmaß
-BRESCHE | Lücke in der Mauer | Für jemanden in die … springen | Durchbruch in der Front
-HANGAR | Flugzeughalle | Garage für Jets | Unterstand am Flugfeld
-HER | Hierhin, zu mir | „Komm …!“ | Vor langer Zeit: lange …
-KULT | Verehrung, Anbetung | Status legendärer Filme | Religiöse Verehrungsform
-ABRUF | Auf … bereit | Anforderung einer Lieferung | Abfrage von Daten
-MUSIKANTEN | Spielleute (Mz.) | Bremer Stadt… (Märchen) | Kapelle auf dem Volksfest
-AUTOFAHRT | Reise mit dem Pkw | Ausflug im Wagen | Tour über die Autobahn
-RASANT | Sehr schnell | Stürmisch, flott | Atemberaubend schnell
-SEELEN | Innere Wesen (Mz.) | Gute … (gutmütige Menschen) | Unsterbliches im Menschen (Mz.)
-REN | Nordisches Hirschtier | Zugtier der Samen | Tier der Tundra
-BEI | Nahe an | „… mir zu Hause“ | Präposition: in der Nähe
-IRGENDWO | An einem unbestimmten Ort | Nirgends genau | Wo auch immer
-DGB | Gewerkschaftsdachverband (Abk.) | Bund der Arbeitnehmer (Abk.) | Veranstalter am 1. Mai (Abk.)
-FABEL | Tiergeschichte mit Moral | Kurzgeschichte von Äsop | Erzählung wie „Fuchs und Rabe“
-NDR | Sender in Hamburg (Abk.) | Norddeutsche Rundfunkanstalt | Macht die „Tagesschau“ (Abk.)
-PRUEFEN | Kontrollieren | Testen, untersuchen | Examen abnehmen
-BRITTA | Frauenname | Skandinavischer Vorname | Kurzform von Birgitta
-IHR | Personalpronomen, 2. Person Plural | „… Kinderlein, kommet“ | Anrede für mehrere
-KANT | Philosoph aus Königsberg | „Kritik der reinen Vernunft“ | Denker des Kategorischen Imperativs
+HELM | Kopfschutz | Schutzhaube des Ritters | Steuer auf dem Schiff
+INNE | … haben (besitzen) | … sein (bewusst sein) | … halten (stocken)
+STAUB | Feiner Schmutz | Wird gewischt und gesaugt | Sich aus dem … machen
+TIBET | Hochland im Himalaya | Heimat des Dalai Lama | Dach der Welt
+FEIER | Fest | Party, Fete | Zeremonie
+SET | Satz beim Tennis | Drehort beim Film | Zusammenstellung, Garnitur
+MIENE | Gesichtsausdruck | Keine … verziehen | Pokerface ist eine
+REDEN | Sprechen | Ansprachen (Mz.) | Silber, laut Sprichwort
+TNT | Sprengstoff (Abk.) | Trinitrotoluol (Abk.) | Explosiv (Abk.)
+GLEISE | Schienen (Mz.) | Bahnsteig-Nummern | Darauf rollt der Zug
+GAU | Größter anzunehmender Unfall | Landschaft, Bezirk (alt) | Super-… (Katastrophe)
+AUSWERTEN | Analysieren | Daten untersuchen | Ergebnisse zusammenfassen
+ALLIANZ | Bündnis | Pakt von Staaten | Münchner Versicherer
+STEUER | Abgabe ans Finanzamt | Lenkrad | Ruder am Schiff
+STRASSE | Fahrbahn | Gasse, Allee | Weg für Autos
+ELI | Hohepriester im Alten Testament | Männername | Lehrer des Samuel
+GILDE | Zunft der Kaufleute | Handwerkervereinigung | Verband (Mittelalter)
+GUT | Gegenteil von schlecht | Landsitz | Schulnote 2
+ADVENT | Zeit vor Weihnachten | Vier Kerzen am Kranz | Ankunft (lat.)
+SAFE | Tresor | Geldschrank | Sicher (engl.)
+ANGABEN | Daten, Auskünfte | Informationen (Mz.) | Prahlereien (Mz.)
+ADA | Frauenname | Programmiersprache | … Lovelace
+NEU | Gegenteil von alt | Frisch, ungebraucht | Brand…
+NL | Niederlande (Kfz-Zeichen) | Kennzeichen aus Amsterdam | Länderkürzel (Holland)
+HE | Ruf: „…, du da!“ | Heliumsymbol | Ausruf der Aufmerksamkeit
+REIZ | Anziehungskraft | Charme | Stimulus
+BEIM | Bei dem | „… Bäcker“ | Präposition mit Artikel
+STAEDTER | Großstadtbewohner | Urbaner Mensch | Gegenteil vom Landei
+ZENTRUM | Mitte | Stadtmitte | Kern, Mittelpunkt
+GEFALLEN | Freundschaftsdienst | Zusagen, behagen | Einen … tun
+DELL | US-Computerhersteller | PC-Marke aus Texas | Michael …
+ETAT | Haushalt, Budget | Staatshaushalt | Finanzplan
+AST | Zweig | Teil eines Baums | Auf dem absteigenden …
+TAU | Morgenfeuchte | Dickes Seil | Griechischer Buchstabe
+ENTGEGEN | Gegen, wider | Zu jemandem hin | … allen Erwartungen
+III | Römische Drei | Drei, römisch | Teil drei eines Films
+SIR | Englischer Adelstitel | Herr (engl.) | Anrede eines Ritters
+ABWESEND | Nicht da | Geistig woanders | Fehlend
+NT | Neues Testament (Abk.) | Gegenstück zum AT | Zweiter Bibelteil (Abk.)
+ALT | Betagt | Tiefe Frauenstimme | Bier aus Düsseldorf
 AUE | Flusswiese | Niederung am Bach | Grünland am Ufer
-PORT | Anschluss am Computer | Hafen (engl.) | Schnittstelle für Kabel
-TRIEB | Innerer Drang | Junger Spross | Instinkt
-SAN | Heilig (span.) | … Francisco | … Marino
-FRAU | Ehegattin | Dame | Weibliche Person
-LAMA | Andenkamel | Tibetischer Mönch | Spuckt, wenn es sich ärgert
-AB | Weg, fort | „… heute gilt…“ | Gegenteil von an (Fahrplan)
-ENDRUNDE | Finalphase eines Turniers | Letzte Ausscheidung | Hier fällt die Entscheidung im Turnier
-BEHR | Familienname | Nachname des Schauspielers Wolfgang | Deutscher Familienname
-HIERAN | Daran, an dieser Stelle | „… erkennt man es“ | An diesem Punkt
-TURNER | Sportler am Reck | Englischer Maler (William) | Riegen-Mitglied
-HAFER | Getreide für Pferde | Grundlage von Porridge | Ihn sticht der Übermut
-FC | Fußballclub (Abk.) | Vor Bayern im Vereinsnamen | Vereinskürzel
-PHASE | Abschnitt, Stadium | Mondgestalt | Leiter am Stromnetz
-AEG | Elektrokonzern (Abk.) | Alte Marke für Hausgeräte | Berliner Traditionsfirma (Abk.)
-RAT | Empfehlung | Gremium, Versammlung | Hilfe in der Not
-USB | Computeranschluss (Abk.) | … -Stick | Schnittstelle (Abk.)
-GOLD | Edelmetall | Erster Platz bei Olympia | Au im Periodensystem
-WALTEN | Herrschen, wirken | Seines Amtes … | Gnade … lassen
-BEN | Männername | … Hur (Filmklassiker) | Big … (Londoner Glocke)
-IP | Internetprotokoll (Abk.) | … -Adresse | Netzwerk-Kennung (Abk.)
-FEE | Märchenwesen | Gute … | Zauberin mit drei Wünschen
-BRD | Bundesrepublik (Abk.) | Westdeutschland bis 1990 (Abk.) | Staat seit 1949 (Abk.)
-REGENTEN | Herrscher (Mz.) | Könige und Fürsten | Landesherren
-VI | Römische Sechs | Sechs, römisch | Teil sechs eines Epos (röm.)
+EID | Schwur | Feierliches Versprechen | Wird vor Gericht geleistet
+BEA | Frauenname | Kurzform von Beatrix | Weiblicher Vorname
+AGS | Aktiengesellschaften (Mz., Abk.) | Firmenform (Mz.) | Börsennotierte Firmen
+EREIGNEN | Geschehen | Sich zutragen | Passieren
+RUSS | Schwarzer Belag im Kamin | Kohlenstoffstaub | Schmutz aus dem Schornstein
+ASTA | Studierendenvertretung (Abk.) | Frauenname | Hochschulgremium (Abk.)
