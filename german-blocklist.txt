@@ -53,3 +53,23 @@ JENE      # flektiert (Grundform JENER)
 ABGEBAUT  # Partizip, nicht lexikalisiert
 NEGRO     # nur in Namen (Rio Negro)
 UEBERWAND # Präteritum von überwinden
+ABGEGEBEN # Partizip, nicht lexikalisiert
+BOG       # Präteritum von biegen
+DIES      # flektierte Kurzform (Grundform DIESER)
+GEKLAPPT  # Partizip, nicht lexikalisiert
+LEIBE     # Dativ (zu Leibe)
+GEFEUERT  # Partizip, nicht lexikalisiert
+ISST      # 3. Person von essen
+SEI       # Konjunktiv/Imperativ von sein
+GEPRAEGT  # Partizip, nicht lexikalisiert
+WICH      # Präteritum von weichen
+GROESSER  # Komparativ
+INNEHAT   # 3. Person von innehaben
+ANLIEF    # Präteritum von anlaufen
+BIN       # 1. Person von sein
+ENTHOBEN  # Partizip, nicht lexikalisiert
+HOC       # nur in "ad hoc"
+LIEH      # Präteritum von leihen
+NANNTEN   # Präteritum von nennen
+LIESS     # Präteritum von lassen
+SAH       # Präteritum von sehen

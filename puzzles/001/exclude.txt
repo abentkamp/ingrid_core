@@ -1,0 +1,2 @@
+# Nur fuer dieses Raetsel ausgeschlossen
+GEN       # GENE steht schon im Gitter (Variante)

@@ -672,7 +672,20 @@ fn cmd_refill(dir: &Path, force: bool, opts: &FillOpts) -> Result<()> {
     let old_attempt = old["pattern_attempt"].as_u64().unwrap_or(0);
     let refill_round = old["refill_round"].as_u64().unwrap_or(0) + 1;
 
-    let words = load_words(opts)?;
+    let mut words = load_words(opts)?;
+
+    // Words excluded for this puzzle only, e.g. one half of a variant pair like GEN/GENE that the
+    // dupe check doesn't catch. They stay usable in other puzzles.
+    let exclude_path = dir.join("exclude.txt");
+    let excluded = read_word_set(&exclude_path)?;
+    if !excluded.is_empty() {
+        words
+            .words
+            .retain(|(word, _)| !excluded.contains(&word.to_lowercase()));
+        let exclude_raw = fs::read(&exclude_path).unwrap_or_default();
+        words.hash = fnv1a(&[words.hash.as_bytes(), &exclude_raw]);
+    }
+
     let template = fs::read_to_string(dir.join("grid.txt"))
         .map_err(|err| Error(format!("Couldn't read grid.txt: {err}")))?;
     let pattern = Pattern::from_template(&template)?;
@@ -696,7 +709,13 @@ fn cmd_refill(dir: &Path, force: bool, opts: &FillOpts) -> Result<()> {
         pattern_attempt: attempt,
         refill_round,
     };
-    let puzzle = puzzle_json(&meta, &pattern, &fill, fill_seed, &words, opts)?;
+    let mut puzzle = puzzle_json(&meta, &pattern, &fill, fill_seed, &words, opts)?;
+    if !excluded.is_empty() {
+        puzzle["excluded"] = json!(excluded
+            .iter()
+            .map(|w| w.to_uppercase())
+            .collect::<Vec<_>>());
+    }
     write_puzzle(dir, &pattern, &puzzle)?;
     println!("{} (round {refill_round})", dir.display());
     rebuild_index(dir.parent().unwrap_or(Path::new(".")))

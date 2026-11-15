@@ -4,11 +4,11 @@
   "base_seed": 1000,
   "pattern_attempt": 1,
   "fill_seed": 13750836166534844056,
-  "refill_round": 10,
-  "blocklist_commit": null,
-  "wordlist_hash": "19a6f58457591b7a",
-  "words_checked": false,
-  "solution_hash": "2ad42d6a07ff1d72",
+  "refill_round": 22,
+  "blocklist_commit": "f672f23b2fc3633c54cf809a77eeb20b1bbcbd20+dirty",
+  "wordlist_hash": "fa601ffb344e5f60",
+  "words_checked": true,
+  "solution_hash": "3a590f0062024b66",
   "settings": {
     "min_score": 50,
     "max_len": 10,
@@ -29,37 +29,29 @@
     ".......#...#....."
   ],
   "solution": [
-    "E#GMBH#F#TEE#MAMA",
-    "IDEE#OLIVER#NEBEL",
-    "N#BUCHENWALD#IGEL",
-    "SYLT#LOT#MAENNER#",
-    "T#AEG#PER#U#U#BEI",
-    "AMERIKA#UEBERWAND",
-    "N#SEE#RINGER#HUGO",
-    "DREIRAD#DON#HOTEL"
+    "C#RAUM#G#SAM#GARN",
+    "ATEM#ADRIAN#DABEI",
+    "N#PATROUILLE#STIL",
+    "BROT#SMS#ZAUBERN#",
+    "E#REN#ASS#U#G#EHE",
+    "RITUALE#ABFAHRTEN",
+    "R#ERZ#NELKEN#WEIT",
+    "ANREIZE#MAN#RENTE"
   ],
   "hint_word": {
-    "word": "EINSTAND",
+    "word": "CANBERRA",
     "row": 1,
     "col": 1,
     "dir": "down"
   },
   "hint_letter": "E",
-  "revealed_count": 30,
+  "revealed_count": 25,
   "revealed": [
     [
       1,
       1
     ],
     [
-      1,
-      11
-    ],
-    [
-      1,
-      12
-    ],
-    [
       2,
       1
     ],
@@ -69,18 +61,6 @@
     ],
     [
       2,
-      4
-    ],
-    [
-      2,
-      10
-    ],
-    [
-      2,
-      14
-    ],
-    [
-      2,
       16
     ],
     [
@@ -89,388 +69,391 @@
     ],
     [
       3,
-      7
-    ],
-    [
-      3,
-      16
-    ],
-    [
-      4,
-      1
-    ],
-    [
-      4,
       12
     ],
     [
       4,
+      1
+    ],
+    [
+      4,
+      14
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      5,
       15
     ],
     [
       5,
+      17
+    ],
+    [
+      6,
       1
     ],
     [
-      5,
-      4
+      6,
+      7
     ],
     [
-      5,
-      8
-    ],
-    [
-      5,
+      6,
       16
     ],
     [
-      6,
+      7,
       1
     ],
     [
-      6,
+      7,
       3
     ],
     [
-      6,
-      10
-    ],
-    [
-      6,
-      12
-    ],
-    [
       7,
-      1
-    ],
-    [
-      7,
-      4
-    ],
-    [
-      7,
-      5
+      8
     ],
     [
       7,
       11
     ],
     [
+      7,
+      15
+    ],
+    [
       8,
       1
     ],
     [
       8,
-      3
+      4
     ],
     [
       8,
-      16
+      7
+    ],
+    [
+      8,
+      14
+    ],
+    [
+      8,
+      17
     ]
   ],
   "across": [
     {
-      "word": "SYLT",
+      "word": "BROT",
       "row": 4,
       "col": 1,
       "len": 4,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "NEBEL",
+      "word": "DABEI",
       "row": 2,
       "col": 13,
       "len": 5,
       "score": 55
     },
     {
-      "word": "UEBERWAND",
+      "word": "ABFAHRTEN",
       "row": 6,
       "col": 9,
       "len": 9,
       "score": 50
     },
     {
-      "word": "HUGO",
+      "word": "WEIT",
       "row": 7,
       "col": 14,
       "len": 4,
       "score": 55
     },
     {
-      "word": "IDEE",
+      "word": "ATEM",
       "row": 2,
       "col": 1,
       "len": 4,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "SEE",
+      "word": "ERZ",
       "row": 7,
       "col": 3,
       "len": 3,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "MAENNER",
+      "word": "ZAUBERN",
       "row": 4,
       "col": 10,
       "len": 7,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "GMBH",
+      "word": "RAUM",
       "row": 1,
       "col": 3,
       "len": 4,
       "score": 55
     },
     {
-      "word": "MAMA",
+      "word": "GARN",
       "row": 1,
       "col": 14,
       "len": 4,
       "score": 50
     },
     {
-      "word": "IGEL",
+      "word": "STIL",
       "row": 3,
       "col": 14,
       "len": 4,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "DON",
+      "word": "MAN",
       "row": 8,
       "col": 9,
       "len": 3,
       "score": 55
     },
     {
-      "word": "AEG",
+      "word": "REN",
       "row": 5,
       "col": 3,
       "len": 3,
       "score": 50
     },
     {
-      "word": "RINGER",
+      "word": "NELKEN",
       "row": 7,
       "col": 7,
       "len": 6,
       "score": 50
     },
     {
-      "word": "TEE",
+      "word": "SAM",
       "row": 1,
       "col": 10,
-      "len": 3,
-      "score": 50
-    },
-    {
-      "word": "PER",
-      "row": 5,
-      "col": 7,
       "len": 3,
       "score": 55
     },
     {
-      "word": "LOT",
+      "word": "ASS",
+      "row": 5,
+      "col": 7,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "SMS",
       "row": 4,
       "col": 6,
       "len": 3,
       "score": 50
     },
     {
-      "word": "OLIVER",
+      "word": "ADRIAN",
       "row": 2,
       "col": 6,
       "len": 6,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "HOTEL",
+      "word": "RENTE",
       "row": 8,
       "col": 13,
       "len": 5,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "BEI",
+      "word": "EHE",
       "row": 5,
       "col": 15,
       "len": 3,
       "score": 55
     },
     {
-      "word": "BUCHENWALD",
+      "word": "PATROUILLE",
       "row": 3,
       "col": 3,
       "len": 10,
       "score": 50
     },
     {
-      "word": "DREIRAD",
+      "word": "ANREIZE",
       "row": 8,
       "col": 1,
       "len": 7,
       "score": 50
     },
     {
-      "word": "AMERIKA",
+      "word": "RITUALE",
       "row": 6,
       "col": 1,
       "len": 7,
-      "score": 55
+      "score": 50
     }
   ],
   "down": [
     {
-      "word": "NUR",
+      "word": "BGH",
       "row": 4,
       "col": 13,
       "len": 3,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "LEOPARD",
+      "word": "DOMAENE",
       "row": 2,
       "col": 7,
       "len": 7,
       "score": 50
     },
     {
-      "word": "FINTE",
+      "word": "GRUSS",
       "row": 1,
       "col": 8,
       "len": 5,
       "score": 50
     },
     {
-      "word": "EINSTAND",
+      "word": "CANBERRA",
       "row": 1,
       "col": 1,
       "len": 8,
       "score": 50
     },
     {
-      "word": "RUND",
+      "word": "SALM",
       "row": 5,
       "col": 9,
       "len": 4,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "ER",
+      "word": "AN",
       "row": 6,
       "col": 12,
       "len": 2,
       "score": 55
     },
     {
-      "word": "WHO",
+      "word": "RWE",
       "row": 6,
       "col": 14,
       "len": 3,
       "score": 50
     },
     {
-      "word": "MEIN",
+      "word": "GASE",
       "row": 1,
       "col": 14,
       "len": 4,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "MEUTEREI",
+      "word": "AMATEURE",
       "row": 1,
       "col": 4,
       "len": 8,
       "score": 50
     },
     {
-      "word": "GEBLAESE",
+      "word": "REPORTER",
       "row": 1,
       "col": 3,
       "len": 8,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "DE",
+      "word": "EU",
       "row": 3,
       "col": 12,
       "len": 2,
       "score": 55
     },
     {
-      "word": "EGO",
+      "word": "BKA",
       "row": 6,
       "col": 10,
       "len": 3,
       "score": 50
     },
     {
-      "word": "VW",
+      "word": "II",
       "row": 2,
       "col": 9,
       "len": 2,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "TEAM",
+      "word": "SALZ",
       "row": 1,
       "col": 10,
       "len": 4,
       "score": 55
     },
     {
-      "word": "ALL",
+      "word": "NIL",
       "row": 1,
       "col": 17,
       "len": 3,
-      "score": 55
-    },
-    {
-      "word": "HOHL",
-      "row": 1,
-      "col": 6,
-      "len": 4,
       "score": 50
     },
     {
-      "word": "ERLAUBEN",
+      "word": "MARS",
+      "row": 1,
+      "col": 6,
+      "len": 4,
+      "score": 55
+    },
+    {
+      "word": "ANLAUFEN",
       "row": 1,
       "col": 11,
       "len": 8,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "ABGEBAUT",
+      "word": "ABTRETEN",
       "row": 1,
       "col": 15,
       "len": 8,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "GIER",
+      "word": "NAZI",
       "row": 5,
       "col": 5,
       "len": 4,
       "score": 50
     },
     {
-      "word": "IDOL",
+      "word": "ENTE",
       "row": 5,
       "col": 17,
       "len": 4,
       "score": 50
     },
     {
-      "word": "MEERENGE",
+      "word": "REINHEIT",
       "row": 1,
       "col": 16,
       "len": 8,
       "score": 50
     }
+  ],
+  "excluded": [
+    "GEN"
   ]
 }
