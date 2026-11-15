@@ -163,6 +163,9 @@ the doc's intro explains that this means "selected".
 
 When the user says they are done, read the doc and write `puzzles/NNN/clues.json`:
 
+`scripts/clue-doc-readback.py <saved docs read result> NNN` parses a full-doc `read` (view) result that
+was saved to a file and prints each word's items with their ticked state, as JSON.
+
 ```json
 {"across": [{"word": "ATOME", "clue": "…"}, …], "down": [{"word": "…", "clue": "…"}, …]}
 ```
