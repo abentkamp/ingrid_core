@@ -117,3 +117,35 @@ BETRAF    # Präteritum von betreffen
 INNERN    # Dativ (im Innern)
 STAATE    # Dativ, veraltet (dem Staate)
 ANDERE    # flektiert (Grundform ANDERER)
+# Römische Zahlen (ab Nr. 002 ausgeschlossen; CD, CM, MD, MM, MIX und XI bleiben,
+# weil sie auch etwas anderes bedeuten)
+II        # römische Zahl
+III       # römische Zahl
+IV        # römische Zahl
+VI        # römische Zahl
+VII       # römische Zahl
+VIII      # römische Zahl
+IX        # römische Zahl
+XII       # römische Zahl
+XIII      # römische Zahl
+XIV       # römische Zahl
+GEREIST   # Partizip, nicht lexikalisiert
+GESUNKEN  # Partizip, nicht lexikalisiert
+HIESS     # Präteritum von heißen
+HING      # Präteritum von hängen
+MONT      # nur in Namen (Mont Blanc)
+SCHWAND   # Präteritum von schwinden
+SPRACH    # Präteritum von sprechen
+BEGANGEN  # Partizip, nicht lexikalisiert
+GEWAEHLT  # Partizip, nicht lexikalisiert
+WEM       # Pronomen, Dativ
+GEBRANNT  # Partizip, nicht lexikalisiert
+GESIEGT   # Partizip, nicht lexikalisiert
+RIET      # Präteritum von raten
+GESCHAH   # Präteritum von geschehen
+HAT       # 3. Person von haben
+NESS      # nur in Namen (Loch Ness)
+UMZOG     # Präteritum von umziehen
+DALAI     # nur in "Dalai Lama"
+DORFE     # Dativ, veraltet (dem Dorfe)
+GETARNT   # Partizip, nicht lexikalisiert

@@ -38,6 +38,8 @@ the German word list is in `german-puzzle-setup.md`.
   name (HOC, ANGELES, JEHER) or only as a verb particle (DAR, EINHER). Non-words such as AE or UE are
   rejected too.
 - No taste rule: offensive but valid words (NAZI, HURE, KZ) are allowed.
+- No Roman numerals (II, IV, XIV …; blocklisted). Exceptions with another meaning stay: CD, CM, MD,
+  MM, MIX, XI (Greek letter). Puzzle 001 keeps its II by the user's decision.
 - Contractions are allowed (AM, IM, ZUR, BEIM).
 - The same word must not appear twice in one grid. Ingrid blocks exact duplicates. Variants (GEN and
   GENE, STIEL and STIELE) must be caught by hand and handled with a per-puzzle `exclude.txt` (step 2).

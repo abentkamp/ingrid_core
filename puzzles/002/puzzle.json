@@ -4,11 +4,11 @@
   "base_seed": 1000,
   "pattern_attempt": 2,
   "fill_seed": 979612261197050970,
-  "refill_round": 9,
-  "blocklist_commit": "d8ddae3e8c3bd56a730c4810c35ed3ba874f1655+dirty",
-  "wordlist_hash": "ad70a1ec45761ccf",
+  "refill_round": 16,
+  "blocklist_commit": "eb83a5067fcfe84369f8488fd8f61f961330f78e+dirty",
+  "wordlist_hash": "26c774f5ccf50bc0",
   "words_checked": true,
-  "solution_hash": "102bc699408f29b3",
+  "solution_hash": "23598a6063f76039",
   "settings": {
     "min_score": 50,
     "max_len": 10,
@@ -30,23 +30,23 @@
     ".#.#...#.#......#"
   ],
   "solution": [
-    "ANGABEN#STRASSE#Z",
-    "STEUER#STAUB#INNE",
-    "T#FEIER#AUSWERTEN",
-    "ADA#MIENE#SET#GUT",
-    "#ELI#GILDE#SAFE#R",
-    "ALLIANZ#TIBET#GAU",
-    "GLEISE#REDEN#HELM",
-    "S#N#TNT#R#ADVENT#"
+    "AENDERN#TURBINE#W",
+    "STEIGE#GENIE#AUDI",
+    "T#WAAGE#EINFAHREN",
+    "ABC#LIGEN#GAR#ARD",
+    "#AOL#MORAL#SIMS#S",
+    "ALMOSEN#GASSE#ISO",
+    "BIETEN#GENRE#MEER",
+    "T#R#ETH#R#INLAND#"
   ],
   "hint_word": {
-    "word": "GEFALLEN",
+    "word": "NEWCOMER",
     "row": 1,
     "col": 3,
     "dir": "down"
   },
   "hint_letter": "A",
-  "revealed_count": 19,
+  "revealed_count": 21,
   "revealed": [
     [
       1,
@@ -57,60 +57,68 @@
       3
     ],
     [
-      1,
+      2,
+      3
+    ],
+    [
+      2,
+      14
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
       4
     ],
     [
-      1,
-      12
-    ],
-    [
-      2,
-      3
-    ],
-    [
-      2,
-      10
-    ],
-    [
       3,
-      3
-    ],
-    [
-      3,
-      9
-    ],
-    [
-      4,
-      1
-    ],
-    [
-      4,
-      3
-    ],
-    [
-      5,
-      3
-    ],
-    [
-      5,
-      13
-    ],
-    [
-      6,
-      1
-    ],
-    [
-      6,
-      3
-    ],
-    [
-      6,
       5
     ],
     [
+      3,
+      13
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      4,
+      12
+    ],
+    [
+      4,
+      15
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      9
+    ],
+    [
       6,
-      16
+      1
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      6,
+      10
     ],
     [
       7,
@@ -122,159 +130,159 @@
     ],
     [
       8,
-      11
+      14
     ]
   ],
   "across": [
     {
-      "word": "HELM",
+      "word": "MEER",
       "row": 7,
       "col": 14,
       "len": 4,
       "score": 55
     },
     {
-      "word": "INNE",
+      "word": "AUDI",
       "row": 2,
       "col": 14,
       "len": 4,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "STAUB",
+      "word": "GENIE",
       "row": 2,
       "col": 8,
       "len": 5,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "TIBET",
+      "word": "GASSE",
       "row": 6,
       "col": 9,
       "len": 5,
+      "score": 55
+    },
+    {
+      "word": "WAAGE",
+      "row": 3,
+      "col": 3,
+      "len": 5,
       "score": 50
     },
     {
-      "word": "FEIER",
-      "row": 3,
-      "col": 3,
+      "word": "GAR",
+      "row": 4,
+      "col": 11,
+      "len": 3,
+      "score": 55
+    },
+    {
+      "word": "LIGEN",
+      "row": 4,
+      "col": 5,
       "len": 5,
       "score": 55
     },
     {
-      "word": "SET",
-      "row": 4,
-      "col": 11,
-      "len": 3,
-      "score": 50
-    },
-    {
-      "word": "MIENE",
-      "row": 4,
-      "col": 5,
-      "len": 5,
-      "score": 50
-    },
-    {
-      "word": "REDEN",
+      "word": "GENRE",
       "row": 7,
       "col": 8,
       "len": 5,
       "score": 55
     },
     {
-      "word": "TNT",
+      "word": "ETH",
       "row": 8,
       "col": 5,
       "len": 3,
       "score": 50
     },
     {
-      "word": "GLEISE",
+      "word": "BIETEN",
       "row": 7,
       "col": 1,
       "len": 6,
       "score": 55
     },
     {
-      "word": "GAU",
+      "word": "ISO",
       "row": 6,
       "col": 15,
       "len": 3,
       "score": 50
     },
     {
-      "word": "AUSWERTEN",
+      "word": "EINFAHREN",
       "row": 3,
       "col": 9,
       "len": 9,
       "score": 50
     },
     {
-      "word": "ALLIANZ",
+      "word": "ALMOSEN",
       "row": 6,
       "col": 1,
       "len": 7,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "STEUER",
+      "word": "STEIGE",
       "row": 2,
       "col": 1,
       "len": 6,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "STRASSE",
+      "word": "TURBINE",
       "row": 1,
       "col": 9,
       "len": 7,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "ELI",
+      "word": "AOL",
       "row": 5,
       "col": 2,
       "len": 3,
       "score": 50
     },
     {
-      "word": "GILDE",
+      "word": "MORAL",
       "row": 5,
       "col": 6,
       "len": 5,
-      "score": 50
-    },
-    {
-      "word": "GUT",
-      "row": 4,
-      "col": 15,
-      "len": 3,
       "score": 55
     },
     {
-      "word": "ADVENT",
+      "word": "ARD",
+      "row": 4,
+      "col": 15,
+      "len": 3,
+      "score": 50
+    },
+    {
+      "word": "INLAND",
       "row": 8,
       "col": 11,
       "len": 6,
       "score": 50
     },
     {
-      "word": "SAFE",
+      "word": "SIMS",
       "row": 5,
       "col": 12,
       "len": 4,
       "score": 50
     },
     {
-      "word": "ANGABEN",
+      "word": "AENDERN",
       "row": 1,
       "col": 1,
       "len": 7,
       "score": 55
     },
     {
-      "word": "ADA",
+      "word": "ABC",
       "row": 4,
       "col": 1,
       "len": 3,
@@ -283,172 +291,172 @@
   ],
   "down": [
     {
-      "word": "NEU",
+      "word": "DER",
       "row": 2,
       "col": 16,
       "len": 3,
       "score": 55
     },
     {
-      "word": "NL",
+      "word": "ER",
       "row": 4,
       "col": 8,
       "len": 2,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "HE",
+      "word": "MA",
       "row": 7,
       "col": 14,
       "len": 2,
       "score": 50
     },
     {
-      "word": "REIZ",
+      "word": "EGON",
       "row": 3,
       "col": 7,
-      "len": 4,
-      "score": 50
-    },
-    {
-      "word": "BEIM",
-      "row": 1,
-      "col": 5,
       "len": 4,
       "score": 55
     },
     {
-      "word": "STAEDTER",
+      "word": "EGAL",
+      "row": 1,
+      "col": 5,
+      "len": 4,
+      "score": 50
+    },
+    {
+      "word": "TEENAGER",
       "row": 1,
       "col": 9,
       "len": 8,
       "score": 50
     },
     {
-      "word": "ZENTRUM",
+      "word": "WINDSOR",
       "row": 1,
       "col": 17,
       "len": 7,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "GEFALLEN",
+      "word": "NEWCOMER",
       "row": 1,
       "col": 3,
       "len": 8,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "DELL",
+      "word": "BALI",
       "row": 4,
       "col": 2,
       "len": 4,
       "score": 50
     },
     {
-      "word": "ETAT",
+      "word": "ARIE",
       "row": 3,
       "col": 13,
       "len": 4,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "AST",
+      "word": "SEE",
       "row": 6,
       "col": 5,
       "len": 3,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "TAU",
+      "word": "UNI",
       "row": 1,
       "col": 10,
       "len": 3,
       "score": 50
     },
     {
-      "word": "ENTGEGEN",
+      "word": "EURASIEN",
       "row": 1,
       "col": 15,
       "len": 8,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "III",
+      "word": "LOT",
       "row": 5,
       "col": 4,
       "len": 3,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "SIR",
+      "word": "NAH",
       "row": 1,
       "col": 14,
       "len": 3,
       "score": 55
     },
     {
-      "word": "ABWESEND",
+      "word": "BEFASSEN",
       "row": 1,
       "col": 12,
       "len": 8,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "NT",
+      "word": "ET",
       "row": 1,
       "col": 2,
       "len": 2,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "ALT",
+      "word": "SED",
       "row": 6,
       "col": 16,
       "len": 3,
       "score": 55
     },
     {
-      "word": "AUE",
+      "word": "DIA",
       "row": 1,
       "col": 4,
       "len": 3,
-      "score": 55
+      "score": 50
     },
     {
-      "word": "EID",
+      "word": "LAN",
       "row": 5,
       "col": 10,
       "len": 3,
       "score": 50
     },
     {
-      "word": "BEA",
+      "word": "SRI",
       "row": 6,
       "col": 11,
       "len": 3,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "AGS",
+      "word": "ABT",
       "row": 6,
       "col": 1,
       "len": 3,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "EREIGNEN",
+      "word": "REGIMENT",
       "row": 1,
       "col": 6,
       "len": 8,
-      "score": 50
+      "score": 55
     },
     {
-      "word": "RUSS",
+      "word": "RING",
       "row": 1,
       "col": 11,
       "len": 4,
-      "score": 50
+      "score": 55
     },
     {
       "word": "ASTA",
