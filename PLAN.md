@@ -102,7 +102,7 @@ therefore driven by a **quality score**, not just legality.
 - **Expected rejection rate:** two sample fills had about 4% of entries breaking the rules
   (UE, BEKAM, STIESS, SAELEN), so roughly 1 in 6 fresh fills is clean. Abbreviations and names
   such as SH, DB, KZ, AI or YIN are allowed; there is no extra taste rule. No pre-screen: the
-  check stays lazy, and partial refills (section 2) handle the rest.
+  check stays lazy, and full refills (section 2) handle the rest.
 - The blocklist only removes words. Correct words with too-low scores (HAEUSER, 30) are never
   found this way; a `score-overrides.txt` can be added later if that limits the fills.
 
@@ -147,14 +147,14 @@ therefore driven by a **quality score**, not just legality.
 1. Check every entry of each new puzzle against the allowed-forms rules. Words already accepted
    are cached in `german-approved.txt` and skipped. When all pass, set `words_checked: true`.
 2. Add rejected words to `german-blocklist.txt` with the reason.
-3. Run `zkw refill puzzles/NNN`. A full refill would bring new unchecked words every round
-   (removing words changes the glyph counts Ingrid sorts by), so refill is **partial**: approved
-   entries stay as pre-filled letters in the template, the cells of rejected entries are cleared,
-   and only the reopened slots are filled. Only new entries need checking. Hints and shuffle are
-   re-drawn afterwards.
-4. If the partial refill can't be filled within the caps, fall back to a full refill of the same
-   pattern; if that fails too, a new pattern under the same number (next `pattern_attempt`).
-5. **Round cap:** after 6 rounds, stop and report to the user instead of looping.
+3. Run `zkw refill puzzles/NNN`: a **full refill** of the same pattern with the updated
+   blocklist. Removing words changes the glyph counts Ingrid sorts by, so the result is a
+   largely new fill (new hints, new shuffle), and its new entries are checked again. At about 4%
+   bad entries, roughly 1 in 6 fills is clean, and the approved cache shortens later rounds.
+4. If the pattern no longer fills within the caps, `refill` generates a new pattern under the
+   same number (next `pattern_attempt`) and says so.
+5. **Round cap:** after 10 rounds, stop and report to the user instead of looping. Record the
+   number of rounds per puzzle, so we can see whether refills become a bottleneck.
 6. `refill` refuses to run when `clues.json` exists or `words_checked` is true, unless
    `--force`. The clue doc is created only after the check passes, and read-back verifies the
    words against `puzzle.json`.
@@ -206,7 +206,10 @@ therefore driven by a **quality score**, not just legality.
 
 ## Deferred until after the pilot
 Best-of-k fill choice, automatic font step-down, `score-overrides.txt`, large property tests,
-and the known-good-grid fallback (unless milestone 1 needs it).
+the known-good-grid fallback (unless milestone 1 needs it), and partial refills. A test on one
+fill showed partial refills only work when about 60% of the grid is reopened (the rejected words
+plus two levels of crossings), which keeps about half the entries; revisit if full refills turn
+out to need too many rounds.
 
 ## Repo layout
 ```
@@ -225,7 +228,7 @@ sammlung.pdf
    3 fill. Report the success rate and the median wall time per *successful puzzle*, including
    the time spent on failed candidates. Otherwise tune the soft targets or switch to the fallback.
    Show 5 sample patterns.
-2. `zkw generate`/`refill` (partial refill) with blocklist and JSON;
+2. `zkw generate`/`refill` with blocklist and JSON;
    generate 001–003 and run the word check.
 3. Typst template with placeholder clues; user reviews the layout.
 4. Clue doc for 001–003; user ticks or edits, Claude reads it back.
