@@ -21,6 +21,7 @@ unicode-normalization = "0.1.22"
 tempfile = "3"
 fancy-regex = "0.17"
 either = "1.15.0"
+serde_json = { version = "1.0.89", features = ["preserve_order"] }
 unicode_categories = "0.1.1"
 
 [dev-dependencies]

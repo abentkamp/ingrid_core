@@ -723,6 +723,30 @@ pub fn find_fill_with_seed(
     elimination_sets: Option<&mut [EliminationSet]>,
     seed: u64,
 ) -> Result<FillSuccess, FillFailure> {
+    find_fill_inner(config, timeout, elimination_sets, seed, None)
+}
+
+/// Search for a valid fill like `find_fill_with_seed`, but give up after `max_tries` retries
+/// instead of after a wall-clock deadline, returning `ExceededBacktrackLimit`. Unlike a timeout,
+/// this makes success independent of machine speed, so callers that decide what to do next based
+/// on whether a fill was found stay deterministic.
+#[allow(dead_code)]
+pub fn find_fill_capped(
+    config: &GridConfig,
+    seed: u64,
+    max_tries: usize,
+    timeout: Option<Duration>,
+) -> Result<FillSuccess, FillFailure> {
+    find_fill_inner(config, timeout, None, seed, Some(max_tries))
+}
+
+fn find_fill_inner(
+    config: &GridConfig,
+    timeout: Option<Duration>,
+    elimination_sets: Option<&mut [EliminationSet]>,
+    seed: u64,
+    max_tries: Option<usize>,
+) -> Result<FillSuccess, FillFailure> {
     let start = Instant::now();
     let deadline = timeout.map(|timeout| start + timeout);
 
@@ -799,6 +823,10 @@ pub fn find_fill_with_seed(
     // Now keep trying to fill the grid until we either succeed or run out of time. Each attempt has
     // a slightly larger `max_backtracks` value in addition to having a new RNG seed.
     for retry_num in 0.. {
+        if max_tries.is_some_and(|max_tries| retry_num as usize >= max_tries) {
+            return Err(FillFailure::ExceededBacktrackLimit(max_backtracks));
+        }
+
         match find_fill_for_seed(
             config,
             &slots,
