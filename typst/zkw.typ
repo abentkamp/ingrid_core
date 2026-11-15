@@ -94,8 +94,8 @@
   align(center, text(size: 18pt, weight: "bold", [#p.series Nr. #nr-text(p)]))
   v(1mm)
   align(center, text(size: 9.5pt, style: "italic", [
-    Tragen Sie die Lösungswörter ein. Die Hinweise stehen in zufälliger Reihenfolge,
-    nur nach waagerecht und senkrecht getrennt.
+    Finden Sie die Lösungswörter zu den Hinweisen und finden Sie die passende Stelle im Gitter,
+    um diese einzutragen.
   ]))
   v(4mm)
   align(center, puzzle-grid(p, cell: cell))
