@@ -150,6 +150,10 @@ puzzle, and `### Waagerecht` / `### Senkrecht` subsections in `puzzle.json` orde
 - [ ] Eigener Vorschlag: …
 ```
 
+`python3 -I scripts/clue-drafts-to-md.py puzzles/NNN/puzzle.json puzzles/NNN/clue-drafts.txt` prints a
+puzzle's section in this format (hint-word note included) and refuses drafts that contain their
+answer. It can't catch shared stems (Rentier for REN), so still check those by eye.
+
 The length is shown only in the doc, never in the PDF. Under the hint word's bold line, add the
 italic note "*Lösungshilfe: Dieses Wort steht im Gitter, sein Hinweis erscheint im PDF
 durchgestrichen.*" so the user knows that clue will appear crossed out. Ticked items show struck through in the doc;
