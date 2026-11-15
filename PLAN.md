@@ -75,6 +75,8 @@ therefore driven by a **quality score**, not just legality.
   2. No entry longer than `max_len` (10).
   3. All white cells connected (flood fill).
   4. No two blocks orthogonally adjacent (true of the original; configurable).
+  5. Both letters of every 2-letter entry belong to a crossing entry (added after the pilot;
+     002 and 003 were regenerated under it).
 - **Soft targets** (weighted penalties, tuned in milestone 1), modelled on the original:
   - Entries of 9–10 letters allowed but penalized; at most 2 of them. The original's longest is
     8.
@@ -191,7 +193,7 @@ therefore driven by a **quality score**, not just legality.
   as parameters:
   - **Puzzle page:** header "Zuordnungs-Kreuzwort Nr. 1"; grid at 10 mm per cell (170 × 80 mm),
     blocks solid black, revealed letters in bold sans-serif centered in their cells; below it
-    *Waagerecht* and *Senkrecht* as two-column lists in JSON order, without numbers, positions
+    *Waagerecht* (left column) and *Senkrecht* (right column) in JSON order, without numbers, positions
     or letter counts. Budget: ~46 clues ≈ 24 lines per direction pair at 10 pt ≈ 120 mm, so
     header + grid + clues ≈ 225 mm of the 267 mm text height. The font size is a fixed
     parameter, chosen after looking at the pilot pages.
