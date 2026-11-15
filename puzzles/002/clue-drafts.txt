@@ -1,47 +1,47 @@
-HELM | Kopfschutz | Schutzhaube des Ritters | Steuer auf dem Schiff
-INNE | … haben (besitzen) | … sein (bewusst sein) | … halten (stocken)
-STAUB | Feiner Schmutz | Wird gewischt und gesaugt | Sich aus dem … machen
-TIBET | Hochland im Himalaya | Heimat des Dalai Lama | Dach der Welt
-FEIER | Fest | Party, Fete | Zeremonie
-SET | Satz beim Tennis | Drehort beim Film | Zusammenstellung, Garnitur
-MIENE | Gesichtsausdruck | Keine … verziehen | Pokerface ist eine
-REDEN | Sprechen | Ansprachen (Mz.) | Silber, laut Sprichwort
-TNT | Sprengstoff (Abk.) | Trinitrotoluol (Abk.) | Explosiv (Abk.)
-GLEISE | Schienen (Mz.) | Bahnsteig-Nummern | Darauf rollt der Zug
-GAU | Größter anzunehmender Unfall | Landschaft, Bezirk (alt) | Super-… (Katastrophe)
-AUSWERTEN | Analysieren | Daten untersuchen | Ergebnisse zusammenfassen
-ALLIANZ | Bündnis | Pakt von Staaten | Münchner Versicherer
-STEUER | Abgabe ans Finanzamt | Lenkrad | Ruder am Schiff
-STRASSE | Fahrbahn | Gasse, Allee | Weg für Autos
-ELI | Hohepriester im Alten Testament | Männername | Lehrer des Samuel
-GILDE | Zunft der Kaufleute | Handwerkervereinigung | Verband (Mittelalter)
-GUT | Gegenteil von schlecht | Landsitz | Schulnote 2
-ADVENT | Zeit vor Weihnachten | Vier Kerzen am Kranz | Ankunft (lat.)
-SAFE | Tresor | Geldschrank | Sicher (engl.)
-ANGABEN | Daten, Auskünfte | Informationen (Mz.) | Prahlereien (Mz.)
-ADA | Frauenname | Programmiersprache | … Lovelace
-NEU | Gegenteil von alt | Frisch, ungebraucht | Brand…
-NL | Niederlande (Kfz-Zeichen) | Kennzeichen aus Amsterdam | Länderkürzel (Holland)
-HE | Ruf: „…, du da!“ | Heliumsymbol | Ausruf der Aufmerksamkeit
-REIZ | Anziehungskraft | Charme | Stimulus
-BEIM | Bei dem | „… Bäcker“ | Präposition mit Artikel
-STAEDTER | Großstadtbewohner | Urbaner Mensch | Gegenteil vom Landei
-ZENTRUM | Mitte | Stadtmitte | Kern, Mittelpunkt
-GEFALLEN | Freundschaftsdienst | Zusagen, behagen | Einen … tun
-DELL | US-Computerhersteller | PC-Marke aus Texas | Michael …
-ETAT | Haushalt, Budget | Staatshaushalt | Finanzplan
-AST | Zweig | Teil eines Baums | Auf dem absteigenden …
-TAU | Morgenfeuchte | Dickes Seil | Griechischer Buchstabe
-ENTGEGEN | Gegen, wider | Zu jemandem hin | … allen Erwartungen
-III | Römische Drei | Drei, römisch | Teil drei eines Films
-SIR | Englischer Adelstitel | Herr (engl.) | Anrede eines Ritters
-ABWESEND | Nicht da | Geistig woanders | Fehlend
-NT | Neues Testament (Abk.) | Gegenstück zum AT | Zweiter Bibelteil (Abk.)
-ALT | Betagt | Tiefe Frauenstimme | Bier aus Düsseldorf
-AUE | Flusswiese | Niederung am Bach | Grünland am Ufer
-EID | Schwur | Feierliches Versprechen | Wird vor Gericht geleistet
-BEA | Frauenname | Kurzform von Beatrix | Weiblicher Vorname
-AGS | Aktiengesellschaften (Mz., Abk.) | Firmenform (Mz.) | Börsennotierte Firmen
-EREIGNEN | Geschehen | Sich zutragen | Passieren
-RUSS | Schwarzer Belag im Kamin | Kohlenstoffstaub | Schmutz aus dem Schornstein
+MEER | Ozean | Nord- oder Ostsee | Viel Wasser mit Salz
+AUDI | Autohersteller aus Ingolstadt | Marke mit vier Ringen | Lateinisch für „Horch!“
+GENIE | Hochbegabter Mensch | Einstein war eins | Ausnahmetalent
+GASSE | Schmale Straße | Durchgang zwischen Häusern | Rettungs… auf der Autobahn
+WAAGE | Messgerät für Gewicht | Sternzeichen | Gefürchtetes Badezimmergerät
+GAR | Fertig gekocht | Überhaupt: … nicht | Durch, nicht roh
+LIGEN | Spielklassen (Mz.) | Bundes… (Mz.) | Bündnisse (Mz.)
+GENRE | Gattung, Kategorie | Krimi oder Western | Stilrichtung
+ETH | Zürcher Hochschule (Abk.) | Polytechnikum in Zürich (Abk.) | Einsteins Hochschule (Abk.)
+BIETEN | Zur Verfügung stellen | Bei Auktionen mitsteigern | Offerieren
+ISO | Normungsorganisation (Abk.) | Lichtempfindlichkeit beim Foto | … 9001
+EINFAHREN | In den Bahnhof rollen | Ernte einbringen | Neues Auto schonend fahren
+ALMOSEN | Milde Gabe | Spende für Bettler | Mickrige Summe
+STEIGE | Steiler Weg | Obstkiste | Gemüsekiste aus Holz
+TURBINE | Antrieb im Kraftwerk | Herz des Strahltriebwerks | Kreiselrad
+AOL | Früherer Internetanbieter | „Sie haben Post“-Provider | US-Onlinedienst (Abk.)
+MORAL | Sittlichkeit | Lehre einer Fabel | Kampfgeist der Truppe
+ARD | Erstes Programm (Abk.) | Senderverbund (Abk.) | Sendet die Tagesschau (Abk.)
+INLAND | Gegenteil von Ausland | Binnenland | Innerhalb der Grenzen
+SIMS | Fensterbrett | Mauervorsprung | Kaminbrett
+AENDERN | Wandeln | Umgestalten | Korrigieren
+ABC | Alphabet | Grundwissen | Buchstabenfolge
+DER | Bestimmter Artikel, männlich | „… Pate“ (Filmtitel) | Artikel vor Mann
+ER | Pronomen, männlich | „… oder sie“ | Erbium (chem.)
+MA | Mutter, kindlich | Master of Arts (Abk.) | Mama, kurz
+EGON | Männername | … Olsen (Olsenbande) | Krenz mit Vornamen
+EGAL | Gleichgültig | Einerlei | Wurscht
+TEENAGER | Jugendlicher | Zwischen 13 und 19 Jahre alt | Backfisch, modern
+WINDSOR | Englisches Königshaus | Schloss bei London | Krawattenknoten
+NEWCOMER | Neuling | Shootingstar | Frischling in der Branche
+BALI | Indonesische Insel | Ferieninsel östlich von Java | Insel der Götter
+ARIE | Sologesang in der Oper | Lied der Diva | Opern-Solo
+SEE | Binnengewässer | Bodensee oder Chiemsee | Meer (die …)
+UNI | Hochschule, kurz | Einfarbig (Stoff) | Campus-Kürzel
+EURASIEN | Europa plus Asien | Größte Landmasse | Doppelkontinent
+LOT | Senkblei | Neffe Abrahams | Altes Gewichtsmaß
+NAH | Nicht weit | Benachbart | Gegenteil von fern
+BEFASSEN | Sich beschäftigen | Sich auseinandersetzen | Behandeln
+ET | Und (lat.) | Außerirdischer im Film | „… tu, Brute?“
+SED | DDR-Staatspartei (Abk.) | Partei Honeckers (Abk.) | Einheitspartei (Abk.)
+DIA | Lichtbild | Diapositiv, kurz | Urlaubsfoto zum Projizieren
+LAN | Lokales Netzwerk (Abk.) | Heimnetz (Abk.) | … -Party
+SRI | Ehrentitel in Indien | … Lanka | Hindi: Herr
+ABT | Klostervorsteher | Mönchsoberhaupt | Würdenträger im Kloster
+REGIMENT | Truppenteil | Herrschaft, Führung | Das … führen
+RING | Schmuck am Finger | Boxkampf-Arena | Kreisform
 ASTA | Studierendenvertretung (Abk.) | Frauenname | Hochschulgremium (Abk.)
