@@ -99,10 +99,10 @@ therefore driven by a **quality score**, not just legality.
   `max_length = Some(max_len)`.
 - Ingrid normalizes words to lowercase: compare blocklist entries in lowercase, uppercase all
   output.
-- **One-off pre-screen of short words.** Sample fills showed about 15% of entries failing the
-  rules, concentrated in 2–3-letter junk (SH, DB, YIN, UE, AI, KZ). With a lazy check alone, a
-  fully clean 46-entry fill is very unlikely. The ~450 entries of 2–3 letters at score ≥50 are
-  checked once up front and the bad ones go on the blocklist; longer words stay lazy.
+- **Expected rejection rate:** two sample fills had about 4% of entries breaking the rules
+  (UE, BEKAM, STIESS, SAELEN), so roughly 1 in 6 fresh fills is clean. Abbreviations and names
+  such as SH, DB, KZ, AI or YIN are allowed; there is no extra taste rule. No pre-screen: the
+  check stays lazy, and partial refills (section 2) handle the rest.
 - The blocklist only removes words. Correct words with too-low scores (HAEUSER, 30) are never
   found this way; a `score-overrides.txt` can be added later if that limits the fills.
 
@@ -225,7 +225,7 @@ sammlung.pdf
    3 fill. Report the success rate and the median wall time per *successful puzzle*, including
    the time spent on failed candidates. Otherwise tune the soft targets or switch to the fallback.
    Show 5 sample patterns.
-2. Pre-screen the short words; `zkw generate`/`refill` (partial refill) with blocklist and JSON;
+2. `zkw generate`/`refill` (partial refill) with blocklist and JSON;
    generate 001–003 and run the word check.
 3. Typst template with placeholder clues; user reviews the layout.
 4. Clue doc for 001–003; user ticks or edits, Claude reads it back.
