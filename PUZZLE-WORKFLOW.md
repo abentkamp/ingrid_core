@@ -142,6 +142,7 @@ ATOME | Kleinste Bausteine der Materie | Teilchen aus Kern und Hülle | Gegensta
 - At most about 40 characters, so a clue fits on one line in the PDF.
 - A clue must not contain the answer or a word sharing its stem (Rentier for REN, Haut for HAEUTEN,
   Hadrian for ADRIAN). Mark abbreviations "(Abk.)" and plurals "(Mz.)" where the clue doesn't show it.
+- Element symbols are clued as symbols, e.g. FE "Eisen (chem. Zeichen)".
 - Avoid two words in one puzzle defining each other (ALT "Gegenteil von neu" next to NEU).
 
 ### 4. Clue doc for the user
