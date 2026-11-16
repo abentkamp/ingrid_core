@@ -41,6 +41,10 @@ the German word list is in `german-puzzle-setup.md`.
 - No Roman numerals (II, IV, XIV …; blocklisted). Exceptions with another meaning stay: CD, CM, MD,
   MM, MIX, XI (Greek letter). Puzzle 001 keeps its II by the user's decision.
 - Contractions are allowed (AM, IM, ZUR, BEIM).
+- No word may repeat across puzzles of the series. `zkw generate` and `refill` automatically leave
+  out every word used in another puzzle directory (`repeats_excluded` in `puzzle.json` counts them);
+  `--allow-repeats` turns this off. Puzzles 001–003 predate the rule and share a few words.
+  Variants across puzzles (HAUS in one, HAEUSER in another) are allowed.
 - The same word must not appear twice in one grid. Ingrid blocks exact duplicates. Variants (GEN and
   GENE, STIEL and STIELE) must be caught by hand and handled with a per-puzzle `exclude.txt` (step 2).
 - `german-blocklist.txt` records every rejection with its reason. Use it as precedent for new
@@ -165,6 +169,8 @@ When the user says they are done, read the doc and write `puzzles/NNN/clues.json
 
 `scripts/clue-doc-readback.py <saved docs read result> NNN` parses a full-doc `read` (view) result that
 was saved to a file and prints each word's items with their ticked state, as JSON.
+`scripts/clue-choices-to-json.py <saved docs read result> NNN` writes `puzzles/NNN/clues.json` from it,
+and refuses on a missing or double tick, an empty own clue or a word mismatch.
 
 ```json
 {"across": [{"word": "ATOME", "clue": "…"}, …], "down": [{"word": "…", "clue": "…"}, …]}
@@ -181,7 +187,8 @@ was saved to a file and prints each word's items with their ticked state, as JSO
 scripts/build.sh
 ```
 
-This writes `puzzles/NNN/puzzle-NNN.pdf` (puzzle page and solution page) and `sammlung.pdf`. Puzzles
+This writes `puzzles/NNN/puzzle-NNN.pdf` (puzzle page and solution page), `sammlung.pdf` (all puzzles,
+then all solutions) and `sammlung-ohne-loesung.pdf` (all puzzles, no solutions). Puzzles
 without `clues.json` get placeholder text, which is for layout review only and must never be
 published. Render a page to PNG and look at it before handing PDFs over:
 

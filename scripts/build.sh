@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Build puzzles/NNN/puzzle-NNN.pdf for every puzzle in puzzles/index.json, then sammlung.pdf.
+# Build puzzles/NNN/puzzle-NNN.pdf for every puzzle in puzzles/index.json, then sammlung.pdf and
+# sammlung-ohne-loesung.pdf (puzzles only, no solution pages).
 # Puzzles without clues.json get placeholder clues (for layout review only).
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -23,3 +24,5 @@ done
 clues_csv=$(IFS=,; echo "${with_clues[*]:-}")
 "$TYPST" compile --root . --input "clues=$clues_csv" typst/sammlung.typ sammlung.pdf
 echo sammlung.pdf
+"$TYPST" compile --root . --input "clues=$clues_csv" --input solutions=0 typst/sammlung.typ sammlung-ohne-loesung.pdf
+echo sammlung-ohne-loesung.pdf

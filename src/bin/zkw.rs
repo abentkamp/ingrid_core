@@ -147,6 +147,9 @@ struct FillOpts {
     /// Safety net per fill in seconds: hitting it aborts with an error instead of moving on
     #[arg(long, default_value_t = 600)]
     safety_timeout: u64,
+    /// Allow words that already appear in other puzzles of the series
+    #[arg(long)]
+    allow_repeats: bool,
 }
 
 struct Error(String);
@@ -216,6 +219,7 @@ fn read_word_set(path: &Path) -> Result<BTreeSet<String>> {
         .collect())
 }
 
+#[derive(Clone)]
 struct LoadedWords {
     /// Words usable as fill: score >= min_score, length <= max_len, not blocked.
     words: Vec<(String, u16)>,
@@ -255,6 +259,47 @@ fn load_words(opts: &FillOpts) -> Result<LoadedWords> {
         words,
         hash: fnv1a(&[&raw, &blocklist_raw]),
     })
+}
+
+/// Words used in the other puzzles of the series (every puzzle directory in `out` except
+/// number `number`), lowercased.
+fn words_in_other_puzzles(out: &Path, number: u64) -> Result<BTreeSet<String>> {
+    let mut used = BTreeSet::new();
+    let Ok(read_dir) = fs::read_dir(out) else {
+        return Ok(used);
+    };
+    for dir_entry in read_dir.flatten() {
+        let Ok(puzzle) = read_puzzle(&dir_entry.path()) else {
+            continue;
+        };
+        if puzzle["number"].as_u64() == Some(number) {
+            continue;
+        }
+        used.extend(puzzle_words(&puzzle).iter().map(|w| w.to_lowercase()));
+    }
+    Ok(used)
+}
+
+/// The word list for puzzle `number`: without words used in other puzzles of the series (unless
+/// `--allow-repeats`), so no word repeats across puzzles. Returns the list and the number of
+/// distinct words excluded.
+fn words_for_puzzle(
+    words: &LoadedWords,
+    out: &Path,
+    number: u64,
+    opts: &FillOpts,
+) -> Result<(LoadedWords, usize)> {
+    if opts.allow_repeats {
+        return Ok((words.clone(), 0));
+    }
+    let used = words_in_other_puzzles(out, number)?;
+    let mut words = words.clone();
+    words
+        .words
+        .retain(|(word, _)| !used.contains(&word.to_lowercase()));
+    let used_text: String = used.iter().map(|w| format!("{w}\n")).collect();
+    words.hash = fnv1a(&[words.hash.as_bytes(), used_text.as_bytes()]);
+    Ok((words, used.len()))
 }
 
 /// The last commit touching the blocklist, with "+dirty" if it has uncommitted changes.
@@ -631,7 +676,7 @@ fn cmd_generate(
     force: bool,
     opts: &FillOpts,
 ) -> Result<()> {
-    let words = load_words(opts)?;
+    let all_words = load_words(opts)?;
     for number in start..start + count {
         let dir = out.join(format!("{number:03}"));
         if dir.join("puzzle.json").exists() && !force {
@@ -640,6 +685,8 @@ fn cmd_generate(
                 dir.display()
             )));
         }
+        // Recomputed per puzzle, so puzzles generated earlier in this run count too.
+        let (words, repeats_excluded) = words_for_puzzle(&all_words, out, number, opts)?;
         let (attempt, pattern, fill, fill_seed) = find_puzzle(seed, number, 0, &words, opts)?;
         let meta = PuzzleMeta {
             number,
@@ -647,7 +694,8 @@ fn cmd_generate(
             pattern_attempt: attempt,
             refill_round: 0,
         };
-        let puzzle = puzzle_json(&meta, &pattern, &fill, fill_seed, &words, opts)?;
+        let mut puzzle = puzzle_json(&meta, &pattern, &fill, fill_seed, &words, opts)?;
+        puzzle["repeats_excluded"] = json!(repeats_excluded);
         write_puzzle(&dir, &pattern, &puzzle)?;
         println!("{}", dir.display());
     }
@@ -676,7 +724,8 @@ fn cmd_refill(dir: &Path, force: bool, new_pattern: bool, opts: &FillOpts) -> Re
     let old_attempt = old["pattern_attempt"].as_u64().unwrap_or(0);
     let refill_round = old["refill_round"].as_u64().unwrap_or(0) + 1;
 
-    let mut words = load_words(opts)?;
+    let out = dir.parent().unwrap_or(Path::new("."));
+    let (mut words, repeats_excluded) = words_for_puzzle(&load_words(opts)?, out, number, opts)?;
 
     // Words excluded for this puzzle only, e.g. one half of a variant pair like GEN/GENE that the
     // dupe check doesn't catch. They stay usable in other puzzles.
@@ -718,6 +767,7 @@ fn cmd_refill(dir: &Path, force: bool, new_pattern: bool, opts: &FillOpts) -> Re
         refill_round,
     };
     let mut puzzle = puzzle_json(&meta, &pattern, &fill, fill_seed, &words, opts)?;
+    puzzle["repeats_excluded"] = json!(repeats_excluded);
     if !excluded.is_empty() {
         puzzle["excluded"] = json!(excluded
             .iter()
