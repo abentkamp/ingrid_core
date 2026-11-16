@@ -57,12 +57,17 @@ cargo build --release
 scripts/setup.sh        # installs the pinned Typst version into .tools/
 ```
 
-The word list `wordlist.txt` (`WORD;SCORE`) is committed. `zkw` uses words with score ≥ 50.
+The word list `wordlist.txt` (`WORD;SCORE`) is committed. `zkw` uses words with score ≥ 50, and for
+2- and 3-letter words, which are scarce, score ≥ 40 (`--short-min-score`, `--short-len`).
+`german-extra-words.txt` is merged in (higher score wins): all chemical elements, as two-letter
+symbols (FE, AU …) and German names (EISEN, MOLYBDAEN, plus variants like KALZIUM). Add further
+vetted words there rather than editing `wordlist.txt`.
 
 ## Files
 
 ```
 wordlist.txt               scored word list (source data, do not edit)
+german-extra-words.txt     extra scored words merged into it (chemical elements)
 german-blocklist.txt       rejected words, one per line, "# reason" comments
 german-approved.txt        words already checked and accepted (cache, sorted)
 puzzles/index.json         list of puzzles for the collection (rebuilt by zkw)

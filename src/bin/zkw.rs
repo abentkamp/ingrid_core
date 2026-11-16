@@ -129,6 +129,15 @@ struct FillOpts {
     /// Minimum word score
     #[arg(long, default_value_t = 50)]
     min_score: u16,
+    /// Minimum score for short words (up to --short-len letters), which are scarce
+    #[arg(long, default_value_t = 40)]
+    short_min_score: u16,
+    /// Words up to this length count as short
+    #[arg(long, default_value_t = 3)]
+    short_len: usize,
+    /// Extra scored words (WORD;SCORE) merged into the word list; the higher score wins
+    #[arg(long, default_value = "german-extra-words.txt")]
+    extra_words: PathBuf,
     /// Maximum entry length
     #[arg(long, default_value_t = 10)]
     max_len: usize,
@@ -230,34 +239,56 @@ struct LoadedWords {
 fn load_words(opts: &FillOpts) -> Result<LoadedWords> {
     let raw = fs::read(&opts.wordlist)
         .map_err(|err| Error(format!("Couldn't read '{}': {err}", opts.wordlist.display())))?;
+    let extra_raw = fs::read(&opts.extra_words).unwrap_or_default();
     let blocklist_raw = fs::read(&opts.lists.blocklist).unwrap_or_default();
     let blocklist = read_word_set(&opts.lists.blocklist)?;
-    let text = String::from_utf8_lossy(&raw);
 
-    let mut words = vec![];
-    for line in text.lines() {
-        let Some((word, score)) = line.trim().rsplit_once(';') else {
-            continue;
-        };
-        let Ok(score) = score.trim().parse::<u16>() else {
-            continue;
-        };
-        let word = word.trim();
-        if score < opts.min_score
-            || word.chars().count() > opts.max_len
-            || blocklist.contains(&word.to_lowercase())
-        {
-            continue;
+    // Word list first, in file order; extra words are merged in (higher score wins) or appended,
+    // so the order of existing words stays stable.
+    let mut entries: Vec<(String, u16)> = vec![];
+    let mut index: BTreeMap<String, usize> = BTreeMap::new();
+    for text in [String::from_utf8_lossy(&raw), String::from_utf8_lossy(&extra_raw)] {
+        for line in text.lines() {
+            let line = line.split('#').next().unwrap().trim();
+            let Some((word, score)) = line.rsplit_once(';') else {
+                continue;
+            };
+            let Ok(score) = score.trim().parse::<u16>() else {
+                continue;
+            };
+            let word = word.trim().to_uppercase();
+            if word.is_empty() {
+                continue;
+            }
+            match index.get(&word) {
+                Some(&i) => entries[i].1 = entries[i].1.max(score),
+                None => {
+                    index.insert(word.clone(), entries.len());
+                    entries.push((word, score));
+                }
+            }
         }
-        words.push((word.to_string(), score));
     }
+
+    let words: Vec<(String, u16)> = entries
+        .into_iter()
+        .filter(|(word, score)| {
+            let len = word.chars().count();
+            let min_score = if len <= opts.short_len {
+                opts.short_min_score.min(opts.min_score)
+            } else {
+                opts.min_score
+            };
+            *score >= min_score && len <= opts.max_len && !blocklist.contains(&word.to_lowercase())
+        })
+        .collect();
     if words.is_empty() {
         return Err(Error("No usable words in word list".into()));
     }
 
     Ok(LoadedWords {
         words,
-        hash: fnv1a(&[&raw, &blocklist_raw]),
+        hash: fnv1a(&[&raw, &extra_raw, &blocklist_raw]),
     })
 }
 
@@ -336,7 +367,11 @@ fn build_grid_config(words: &[(String, u16)], template: &str, opts: &FillOpts) -
         Some(opts.max_len),
         None,
     );
-    generate_grid_config_from_template_string(word_list, template, opts.min_score)
+    generate_grid_config_from_template_string(
+        word_list,
+        template,
+        opts.min_score.min(opts.short_min_score),
+    )
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -553,6 +588,8 @@ fn puzzle_json(
         "solution_hash": fnv1a(&[solution_text.as_bytes()]),
         "settings": {
             "min_score": opts.min_score,
+            "short_min_score": opts.short_min_score,
+            "short_len": opts.short_len,
             "max_len": opts.max_len,
             "min_blocks": opts.min_blocks,
             "max_blocks": opts.max_blocks,
